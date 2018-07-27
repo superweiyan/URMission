@@ -15,6 +15,7 @@
 		6E1FE6A1210B1C4B00CE87ED /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1FE6A0210B1C4B00CE87ED /* main.m */; };
 		6E1FE6AB210B1C4B00CE87ED /* URMissionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1FE6AA210B1C4B00CE87ED /* URMissionTests.m */; };
 		6E1FE6B6210B1C4B00CE87ED /* URMissionUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1FE6B5210B1C4B00CE87ED /* URMissionUITests.m */; };
+		F78A5A482A31C8D2AE1B75E5 /* Pods_URMission.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1E61CEAA09D5ECFBAD51482 /* Pods_URMission.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,9 @@
 		6E1FE6B1210B1C4B00CE87ED /* URMissionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = URMissionUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E1FE6B5210B1C4B00CE87ED /* URMissionUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = URMissionUITests.m; sourceTree = "<group>"; };
 		6E1FE6B7210B1C4B00CE87ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6E30B2C81A72C14EC49410C6 /* Pods-URMission.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-URMission.release.xcconfig"; path = "Pods/Target Support Files/Pods-URMission/Pods-URMission.release.xcconfig"; sourceTree = "<group>"; };
+		8FF53715C24B6BB25CDCEA35 /* Pods-URMission.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-URMission.debug.xcconfig"; path = "Pods/Target Support Files/Pods-URMission/Pods-URMission.debug.xcconfig"; sourceTree = "<group>"; };
+		F1E61CEAA09D5ECFBAD51482 /* Pods_URMission.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_URMission.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F78A5A482A31C8D2AE1B75E5 /* Pods_URMission.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +90,8 @@
 				6E1FE6A9210B1C4B00CE87ED /* URMissionTests */,
 				6E1FE6B4210B1C4B00CE87ED /* URMissionUITests */,
 				6E1FE68F210B1C4900CE87ED /* Products */,
+				E031C11BC4D98DD1BC51FBE1 /* Pods */,
+				791BBBFE8B8C3F53F55338DF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -132,6 +139,23 @@
 			path = URMissionUITests;
 			sourceTree = "<group>";
 		};
+		791BBBFE8B8C3F53F55338DF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F1E61CEAA09D5ECFBAD51482 /* Pods_URMission.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E031C11BC4D98DD1BC51FBE1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8FF53715C24B6BB25CDCEA35 /* Pods-URMission.debug.xcconfig */,
+				6E30B2C81A72C14EC49410C6 /* Pods-URMission.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -139,9 +163,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6E1FE6BA210B1C4B00CE87ED /* Build configuration list for PBXNativeTarget "URMission" */;
 			buildPhases = (
+				16A20EBED9372AAF4849CB60 /* [CP] Check Pods Manifest.lock */,
 				6E1FE68A210B1C4900CE87ED /* Sources */,
 				6E1FE68B210B1C4900CE87ED /* Frameworks */,
 				6E1FE68C210B1C4900CE87ED /* Resources */,
+				E3A01B88370361747364B639 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -256,6 +282,51 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		16A20EBED9372AAF4849CB60 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-URMission-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E3A01B88370361747364B639 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-URMission/Pods-URMission-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/FMDB/FMDB.framework",
+				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
+				"${BUILT_PRODUCTS_DIR}/SVPullToRefresh/SVPullToRefresh.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FMDB.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVPullToRefresh.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-URMission/Pods-URMission-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6E1FE68A210B1C4900CE87ED /* Sources */ = {
@@ -431,15 +502,14 @@
 		};
 		6E1FE6BB210B1C4B00CE87ED /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8FF53715C24B6BB25CDCEA35 /* Pods-URMission.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PJD5F25QWG;
 				INFOPLIST_FILE = URMission/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.unreal.URMission;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -448,15 +518,14 @@
 		};
 		6E1FE6BC210B1C4B00CE87ED /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6E30B2C81A72C14EC49410C6 /* Pods-URMission.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PJD5F25QWG;
 				INFOPLIST_FILE = URMission/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.unreal.URMission;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -470,11 +539,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PJD5F25QWG;
 				INFOPLIST_FILE = URMissionTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.unreal.URMissionTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -489,11 +554,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PJD5F25QWG;
 				INFOPLIST_FILE = URMissionTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.unreal.URMissionTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -507,11 +568,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PJD5F25QWG;
 				INFOPLIST_FILE = URMissionUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.unreal.URMissionUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -525,11 +582,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PJD5F25QWG;
 				INFOPLIST_FILE = URMissionUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.unreal.URMissionUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
