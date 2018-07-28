@@ -15,6 +15,10 @@
 		6E1FE6A1210B1C4B00CE87ED /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1FE6A0210B1C4B00CE87ED /* main.m */; };
 		6E1FE6AB210B1C4B00CE87ED /* URMissionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1FE6AA210B1C4B00CE87ED /* URMissionTests.m */; };
 		6E1FE6B6210B1C4B00CE87ED /* URMissionUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1FE6B5210B1C4B00CE87ED /* URMissionUITests.m */; };
+		6E1FE6C6210B2A6400CE87ED /* URMissionAddView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1FE6C5210B2A6400CE87ED /* URMissionAddView.m */; };
+		6E1FE6CA210B313000CE87ED /* URCommonMarco.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1FE6C8210B313000CE87ED /* URCommonMarco.m */; };
+		6E1FE6CE210C64F900CE87ED /* URAddMissionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1FE6CD210C64F900CE87ED /* URAddMissionViewController.m */; };
+		6E1FE6D1210C6AA500CE87ED /* URRotationPresentAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1FE6D0210C6AA500CE87ED /* URRotationPresentAnimation.m */; };
 		F78A5A482A31C8D2AE1B75E5 /* Pods_URMission.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1E61CEAA09D5ECFBAD51482 /* Pods_URMission.framework */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +56,14 @@
 		6E1FE6B1210B1C4B00CE87ED /* URMissionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = URMissionUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E1FE6B5210B1C4B00CE87ED /* URMissionUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = URMissionUITests.m; sourceTree = "<group>"; };
 		6E1FE6B7210B1C4B00CE87ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6E1FE6C4210B2A6400CE87ED /* URMissionAddView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URMissionAddView.h; sourceTree = "<group>"; };
+		6E1FE6C5210B2A6400CE87ED /* URMissionAddView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = URMissionAddView.m; sourceTree = "<group>"; };
+		6E1FE6C8210B313000CE87ED /* URCommonMarco.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URCommonMarco.m; sourceTree = "<group>"; };
+		6E1FE6C9210B313000CE87ED /* URCommonMarco.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URCommonMarco.h; sourceTree = "<group>"; };
+		6E1FE6CC210C64F900CE87ED /* URAddMissionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URAddMissionViewController.h; sourceTree = "<group>"; };
+		6E1FE6CD210C64F900CE87ED /* URAddMissionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = URAddMissionViewController.m; sourceTree = "<group>"; };
+		6E1FE6CF210C6AA500CE87ED /* URRotationPresentAnimation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URRotationPresentAnimation.h; sourceTree = "<group>"; };
+		6E1FE6D0210C6AA500CE87ED /* URRotationPresentAnimation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = URRotationPresentAnimation.m; sourceTree = "<group>"; };
 		6E30B2C81A72C14EC49410C6 /* Pods-URMission.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-URMission.release.xcconfig"; path = "Pods/Target Support Files/Pods-URMission/Pods-URMission.release.xcconfig"; sourceTree = "<group>"; };
 		8FF53715C24B6BB25CDCEA35 /* Pods-URMission.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-URMission.debug.xcconfig"; path = "Pods/Target Support Files/Pods-URMission/Pods-URMission.debug.xcconfig"; sourceTree = "<group>"; };
 		F1E61CEAA09D5ECFBAD51482 /* Pods_URMission.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_URMission.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -108,6 +120,8 @@
 		6E1FE690210B1C4900CE87ED /* URMission */ = {
 			isa = PBXGroup;
 			children = (
+				6E1FE6C7210B313000CE87ED /* Macro */,
+				6E1FE6C3210B2A4A00CE87ED /* Mission */,
 				6E1FE691210B1C4900CE87ED /* AppDelegate.h */,
 				6E1FE692210B1C4900CE87ED /* AppDelegate.m */,
 				6E1FE694210B1C4900CE87ED /* ViewController.h */,
@@ -117,6 +131,8 @@
 				6E1FE69C210B1C4B00CE87ED /* LaunchScreen.storyboard */,
 				6E1FE69F210B1C4B00CE87ED /* Info.plist */,
 				6E1FE6A0210B1C4B00CE87ED /* main.m */,
+				6E1FE6CF210C6AA500CE87ED /* URRotationPresentAnimation.h */,
+				6E1FE6D0210C6AA500CE87ED /* URRotationPresentAnimation.m */,
 			);
 			path = URMission;
 			sourceTree = "<group>";
@@ -137,6 +153,26 @@
 				6E1FE6B7210B1C4B00CE87ED /* Info.plist */,
 			);
 			path = URMissionUITests;
+			sourceTree = "<group>";
+		};
+		6E1FE6C3210B2A4A00CE87ED /* Mission */ = {
+			isa = PBXGroup;
+			children = (
+				6E1FE6C4210B2A6400CE87ED /* URMissionAddView.h */,
+				6E1FE6C5210B2A6400CE87ED /* URMissionAddView.m */,
+				6E1FE6CC210C64F900CE87ED /* URAddMissionViewController.h */,
+				6E1FE6CD210C64F900CE87ED /* URAddMissionViewController.m */,
+			);
+			path = Mission;
+			sourceTree = "<group>";
+		};
+		6E1FE6C7210B313000CE87ED /* Macro */ = {
+			isa = PBXGroup;
+			children = (
+				6E1FE6C8210B313000CE87ED /* URCommonMarco.m */,
+				6E1FE6C9210B313000CE87ED /* URCommonMarco.h */,
+			);
+			path = Macro;
 			sourceTree = "<group>";
 		};
 		791BBBFE8B8C3F53F55338DF /* Frameworks */ = {
@@ -334,7 +370,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				6E1FE696210B1C4900CE87ED /* ViewController.m in Sources */,
+				6E1FE6CA210B313000CE87ED /* URCommonMarco.m in Sources */,
+				6E1FE6D1210C6AA500CE87ED /* URRotationPresentAnimation.m in Sources */,
+				6E1FE6CE210C64F900CE87ED /* URAddMissionViewController.m in Sources */,
 				6E1FE6A1210B1C4B00CE87ED /* main.m in Sources */,
+				6E1FE6C6210B2A6400CE87ED /* URMissionAddView.m in Sources */,
 				6E1FE693210B1C4900CE87ED /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -509,7 +549,10 @@
 				DEVELOPMENT_TEAM = PJD5F25QWG;
 				INFOPLIST_FILE = URMission/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.unreal.URMission;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -525,7 +568,10 @@
 				DEVELOPMENT_TEAM = PJD5F25QWG;
 				INFOPLIST_FILE = URMission/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.unreal.URMission;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -539,7 +585,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PJD5F25QWG;
 				INFOPLIST_FILE = URMissionTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.unreal.URMissionTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -554,7 +604,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PJD5F25QWG;
 				INFOPLIST_FILE = URMissionTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.unreal.URMissionTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -568,7 +622,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PJD5F25QWG;
 				INFOPLIST_FILE = URMissionUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.unreal.URMissionUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -582,7 +640,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PJD5F25QWG;
 				INFOPLIST_FILE = URMissionUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.unreal.URMissionUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
