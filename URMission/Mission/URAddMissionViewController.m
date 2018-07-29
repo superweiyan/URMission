@@ -7,8 +7,12 @@
 //
 
 #import "URAddMissionViewController.h"
+#import "URCommonMarco.h"
+#import "URMissionAddView.h"
 
 @interface URAddMissionViewController ()
+
+@property (nonatomic, strong) URMissionAddView        *missionView;
 
 @end
 
@@ -16,8 +20,34 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor redColor];
+    self.view.backgroundColor = [UIColor colorWithWhite:1 alpha:0.3];
     // Do any additional setup after loading the view.
+        
+    CGFloat top = ([UIScreen mainScreen].bounds.size.height - 360)/2;
+    CGFloat x = ([UIScreen mainScreen].bounds.size.width - 300)/2;
+    self.missionView = [[URMissionAddView alloc] initWithFrame:CGRectMake(x, top, 300, 1)];
+    self.missionView.clipsToBounds = YES;
+    [self.view addSubview:self.missionView];
+    
+    self.missionView.addMissionCallback = ^(URMissionModel * missionModel) {
+        
+    };
+    
+    WeakSelf
+    self.missionView.addDismissCallback = ^{
+        [weakSelf dismissViewControllerAnimated:YES completion:nil];
+    };
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    CGFloat top = ([UIScreen mainScreen].bounds.size.height - 360)/2;
+    CGFloat x = ([UIScreen mainScreen].bounds.size.width - 300)/2;
+    WeakSelf
+    [UIView animateWithDuration:1.5 animations:^{
+        weakSelf.missionView.frame = CGRectMake(x, top, 300, 360);
+    }];
 }
 
 - (void)didReceiveMemoryWarning {

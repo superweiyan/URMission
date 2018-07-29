@@ -7,9 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "URMissionType.h"
+
+typedef void (^MissionAddClicked)(URMissionModel *);
+typedef void (^MissionAddDismiss) (void);
 
 @interface URMissionAddView : UIView
 
-+ (instancetype)showMissionView;
+@property (nonatomic, copy) MissionAddClicked   addMissionCallback;
+@property (nonatomic, copy) MissionAddDismiss   addDismissCallback;
 
 @end

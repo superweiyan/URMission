@@ -13,7 +13,7 @@
 #import "URRotationPresentAnimation.h"
 #import "URAddMissionViewController.h"
 
-@interface ViewController ()<UITableViewDelegate, UITableViewDataSource, UINavigationControllerDelegate>
+@interface ViewController ()<UITableViewDelegate, UITableViewDataSource, UIViewControllerTransitioningDelegate, UINavigationControllerDelegate>
 
 @property (nonatomic, strong) UITableView   *missionTableview;
 @property (nonatomic, strong) NSArray       *missionItemArray;
@@ -67,7 +67,27 @@
                                                          fromViewController:(UIViewController *)fromVC
                                                            toViewController:(UIViewController *)toVC
 {
+    if (operation == UINavigationControllerOperationPush) {
+        return [URRotationPresentAnimation animationWithAnimationType:AnimationTypeNavPush];
+    }else if(operation == UINavigationControllerOperationPop){
+        return [URRotationPresentAnimation animationWithAnimationType:AnimationTypeNavPop];
+    }else {
+        return nil;
+    }
+    return nil;
+}
+
+
+#pragma mark - modal transition animation delegate
+- (id<UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented
+                                                                  presentingController:(UIViewController *)presenting
+                                                                      sourceController:(UIViewController *)source{
+    return [URRotationPresentAnimation animationWithAnimationType:AnimationTypeModalPresent];
+}
+
+- (id<UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed{
     
+    return [URRotationPresentAnimation animationWithAnimationType:AnimationTypeModalDismiss];
 }
 
 #pragma mark - tableView
@@ -102,7 +122,7 @@
     
     URAddMissionViewController *controller = [[URAddMissionViewController alloc] init];
     controller.transitioningDelegate = self;
-    self.
+    [self presentViewController:controller animated:NO completion:nil];
 }
 
 

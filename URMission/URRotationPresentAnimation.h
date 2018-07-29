@@ -9,6 +9,17 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
+
+typedef NS_ENUM(NSUInteger, AnimationType) {
+    
+    AnimationTypeModalPresent = 0,  //Modal弹出动画
+    AnimationTypeModalDismiss,      //Modal消失动画
+    AnimationTypeNavPush,           //Nav Push动画
+    AnimationTypeNavPop             //Nav Pop动画
+};
+
 @interface URRotationPresentAnimation : NSObject<UIViewControllerAnimatedTransitioning>
+
++ (instancetype)animationWithAnimationType:(AnimationType)animationType;
 
 @end
