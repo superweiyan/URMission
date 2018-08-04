@@ -8,8 +8,8 @@
 
 #import "URMissionType.h"
 
+NSString *kURMissionAddNotification = @"kURMissionAddNotification";
+
 @implementation URMissionModel
-
-
 
 @end

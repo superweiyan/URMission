@@ -9,6 +9,7 @@
 #import "URAddMissionViewController.h"
 #import "URCommonMarco.h"
 #import "URMissionAddView.h"
+#import "URMissionModule.h"
 
 @interface URAddMissionViewController ()
 
@@ -29,11 +30,11 @@
     self.missionView.clipsToBounds = YES;
     [self.view addSubview:self.missionView];
     
-    self.missionView.addMissionCallback = ^(URMissionModel * missionModel) {
-        
-    };
-    
     WeakSelf
+    self.missionView.addMissionCallback = ^(URMissionModel * missionModel) {
+        [[URMissionModule sharedObject] addMission:missionModel];
+    };
+
     self.missionView.addDismissCallback = ^{
         [weakSelf dismissViewControllerAnimated:YES completion:nil];
     };

@@ -51,22 +51,23 @@
         
         [self.closeBtn mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.mas_equalTo(self).mas_offset(5);
-            make.size.mas_equalTo(CGSizeMake(20, 15));
+            make.size.mas_equalTo(CGSizeMake(40, 25));
             make.trailing.mas_equalTo(self).mas_offset(-5);
+        }];
+        
+        [self.okButton mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.mas_equalTo(self).mas_offset(5);
+            make.size.mas_equalTo(CGSizeMake(40, 25));
+            make.leading.mas_equalTo(self).mas_offset(5);
         }];
         
         [self.datePicker mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.mas_equalTo(self.closeBtn.mas_bottom).mas_offset(5);
             make.leading.mas_equalTo(self);
             make.trailing.mas_equalTo(self);
-            make.bottom.mas_equalTo(self).mas_offset(-30);
+            make.bottom.mas_equalTo(self).mas_offset(-10);
         }];
 
-        [self.okButton mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.top.mas_equalTo(self.datePicker.mas_bottom).mas_offset(5);
-            make.size.mas_equalTo(CGSizeMake(60, 20));
-            make.centerX.mas_equalTo(self);
-        }];
     }
     return self;
 }

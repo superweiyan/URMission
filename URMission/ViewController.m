@@ -12,6 +12,9 @@
 #import "URCommonMarco.h"
 #import "URRotationPresentAnimation.h"
 #import "URAddMissionViewController.h"
+#import "URMissionCardTableViewCell.h"
+#import "URMissionModule.h"
+#import "URMissionType.h"
 
 @interface ViewController ()<UITableViewDelegate, UITableViewDataSource, UIViewControllerTransitioningDelegate, UINavigationControllerDelegate>
 
@@ -31,6 +34,12 @@
     [self initViews];
     [self loadData];
     [self addMission];
+    [self initNotification];
+}
+
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 - (void)initViews
@@ -39,6 +48,8 @@
     self.missionTableview.delegate = self;
     self.missionTableview.dataSource = self;
     [self.view addSubview:self.missionTableview];
+    
+    [self.missionTableview registerClass:[URMissionCardTableViewCell class] forCellReuseIdentifier:@"URMissionCardTableViewCellIndentifier"];
 
     [self.missionTableview mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.mas_equalTo(self.view);
@@ -47,13 +58,21 @@
 
 - (void)loadData
 {
-    
+    self.missionItemArray = [[URMissionModule sharedObject] getMission];
+    [self.missionTableview reloadData];
 }
 
 - (void)addMission
 {
     UIBarButtonItem *right = [[UIBarButtonItem alloc] initWithTitle:@"任务" style:UIBarButtonItemStylePlain target:self action:@selector(onAddMission)];
     self.navigationItem.rightBarButtonItem = right;
+}
+
+- (void)initNotification
+{
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(onURMissionAddNotification:) name:kURMissionAddNotification
+                                               object:nil];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -94,12 +113,18 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 1;
+    return self.missionItemArray.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return [UITableViewCell new];
+    URMissionCardTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"URMissionCardTableViewCellIndentifier"];
+    return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 200;
 }
 
 #pragma mark - add mission

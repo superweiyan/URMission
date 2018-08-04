@@ -107,6 +107,7 @@
     [self addSubview:self.okBtn];
     
     self.cancelBtn = [[UIButton alloc] init];
+    [self.cancelBtn setTitle:@"取消" forState:UIControlStateNormal];
     self.cancelBtn.backgroundColor = [UIColor redColor];
     [self.cancelBtn addTarget:self action:@selector(onOKClicked:) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:self.cancelBtn];
@@ -127,6 +128,9 @@
 
 - (void)onTimeClicked:(id)sender
 {
+    [self.missionName resignFirstResponder];
+    [self.missionDesc resignFirstResponder];
+    
     self.datePicker = [[URDataPickerView alloc] init];
     self.datePicker.backgroundColor = [UIColor whiteColor];
     

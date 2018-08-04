@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+extern NSString *kURMissionAddNotification ;
+
 typedef NS_ENUM(NSUInteger, URPriorityType) {
     URPriorityTypeNormal = 0,   //普通
     URPriorityTypeImport = 1,   //重要
