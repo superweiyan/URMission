@@ -64,14 +64,18 @@
 
 - (void)addMission
 {
-    UIBarButtonItem *right = [[UIBarButtonItem alloc] initWithTitle:@"任务" style:UIBarButtonItemStylePlain target:self action:@selector(onAddMission)];
+    UIBarButtonItem *right = [[UIBarButtonItem alloc] initWithTitle:@"任务"
+                                                              style:UIBarButtonItemStylePlain
+                                                             target:self
+                                                             action:@selector(onAddMission)];
     self.navigationItem.rightBarButtonItem = right;
 }
 
 - (void)initNotification
 {
     [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(onURMissionAddNotification:) name:kURMissionAddNotification
+                                             selector:@selector(onURMissionAddNotification:)
+                                                 name:kURMissionAddNotification
                                                object:nil];
 }
 
@@ -119,12 +123,16 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     URMissionCardTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"URMissionCardTableViewCellIndentifier"];
+    if (indexPath.row < self.missionItemArray.count) {
+        URMissionModel *model = [self.missionItemArray objectAtIndex:indexPath.row];
+        cell.missionModel = model;
+    }
     return cell;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 200;
+    return 100;
 }
 
 #pragma mark - add mission
@@ -150,5 +158,10 @@
     [self presentViewController:controller animated:NO completion:nil];
 }
 
+- (void)onURMissionAddNotification:(NSNotification *)notification
+{
+    self.missionItemArray = [URMissionModule sharedObject].getMission;
+    [self.missionTableview reloadData];
+}
 
 @end

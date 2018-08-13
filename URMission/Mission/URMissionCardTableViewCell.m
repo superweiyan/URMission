@@ -79,7 +79,6 @@
             make.top.mas_equalTo(self.missionDesc.mas_bottom).mas_offset(5);
             make.height.mas_equalTo(20);
         }];
-
     }
     return self;
 }

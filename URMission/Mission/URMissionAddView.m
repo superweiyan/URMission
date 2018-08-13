@@ -10,6 +10,8 @@
 #import "Masonry.h"
 #import "URDataPickerView.h"
 #import "URCommonMarco.h"
+#import "NSString+Utils.h"
+#import "URAlertViewUtil.h"
 
 @interface URMissionAddView()
 
@@ -25,6 +27,8 @@
 
 @property (nonatomic, strong) UIButton              *okBtn;
 @property (nonatomic, strong) UIButton              *cancelBtn;
+
+@property (nonatomic, strong) UILabel               *tipLabel;
 
 @end
 
@@ -46,6 +50,11 @@
         [self initViews];
     }
     return self;
+}
+
+- (void)dealloc
+{
+    [NSObject cancelPreviousPerformRequestsWithTarget:self];
 }
 
 - (void)initViews
@@ -103,6 +112,7 @@
 
     self.okBtn = [[UIButton alloc] init];
     self.okBtn.backgroundColor = [UIColor redColor];
+    [self.okBtn setTitle:@"确定" forState:UIControlStateNormal];
     [self.okBtn addTarget:self action:@selector(onOKClicked:) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:self.okBtn];
     
@@ -124,6 +134,19 @@
         make.size.mas_equalTo(CGSizeMake(60, 30));
     }];
 
+    self.tipLabel = [[UILabel alloc] init];
+    self.tipLabel.text = @"输入的内容不完整";
+    self.tipLabel.font = [UIFont systemFontOfSize:13];
+    self.tipLabel.textAlignment = NSTextAlignmentCenter;
+    self.tipLabel.hidden = YES;
+    [self addSubview:self.tipLabel];
+    
+    [self.tipLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.leading.mas_equalTo(self);
+        make.trailing.mas_equalTo(self);
+        make.bottom.mas_equalTo(self.okBtn.mas_top).mas_offset(-5);
+        make.height.mas_equalTo(25);
+    }];
 }
 
 - (void)onTimeClicked:(id)sender
@@ -174,6 +197,18 @@
 - (void)onOKClicked:(id)sender
 {
     if (sender == self.okBtn) {
+        
+        if (![self checkCondition]) {
+            UIAlertController *controller = [URAlertViewUtil presentAlertView:@"" msg:@"条件不全" handler:^(BOOL isOK) {
+                
+            }];
+            
+            [[UIApplication sharedApplication].keyWindow.rootViewController.navigationController presentViewController:controller animated:YES completion:^{
+                
+            }];
+            return ;
+        }
+        
         URMissionModel *missionModel = [[URMissionModel alloc] init];
         missionModel.startDate = self.startTime;
         missionModel.endDate = self.endTime;
@@ -192,6 +227,20 @@
     }
 }
 
+- (BOOL)checkCondition
+{
+    NSString *txt = [self.missionName.text filterSpace];
+    if (txt.length == 0) {
+        return NO;
+    }
+    
+    if (self.startTime == nil || self.endTime == nil) {
+        return NO;
+    }
+    
+    return YES;
+}
+
 + (NSString *)converData:(NSDate *)date
 {
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
@@ -200,4 +249,15 @@
     return [formatter stringFromDate:date];
 }
 
+- (void)showTipLabel
+{
+    self.tipLabel.hidden = NO;
+    [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(hiddenTipLabel) object:nil];
+    [self performSelector:@selector(hiddenTipLabel) withObject:nil afterDelay:3];
+}
+
+- (void)hiddenTipLabel
+{
+    self.tipLabel.hidden = YES;
+}
 @end

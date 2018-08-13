@@ -28,6 +28,8 @@
 		6E1FE6EE21103A4000CE87ED /* URPathConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1FE6EB21103A4000CE87ED /* URPathConfig.m */; };
 		6E1FE6F221103E3700CE87ED /* NSDate+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1FE6F121103E3700CE87ED /* NSDate+Utils.m */; };
 		6E1FE6F521103EC900CE87ED /* NSDateFormatter+SharedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1FE6F421103EC900CE87ED /* NSDateFormatter+SharedObject.m */; };
+		6ED692E2211FD7B300E360C8 /* NSString+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ED692E1211FD7B300E360C8 /* NSString+Utils.m */; };
+		6ED692E8211FDBB700E360C8 /* URAlertViewUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ED692E7211FDBB700E360C8 /* URAlertViewUtil.m */; };
 		F78A5A482A31C8D2AE1B75E5 /* Pods_URMission.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1E61CEAA09D5ECFBAD51482 /* Pods_URMission.framework */; };
 /* End PBXBuildFile section */
 
@@ -92,6 +94,10 @@
 		6E1FE6F321103EC900CE87ED /* NSDateFormatter+SharedObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDateFormatter+SharedObject.h"; sourceTree = "<group>"; };
 		6E1FE6F421103EC900CE87ED /* NSDateFormatter+SharedObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDateFormatter+SharedObject.m"; sourceTree = "<group>"; };
 		6E30B2C81A72C14EC49410C6 /* Pods-URMission.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-URMission.release.xcconfig"; path = "Pods/Target Support Files/Pods-URMission/Pods-URMission.release.xcconfig"; sourceTree = "<group>"; };
+		6ED692E0211FD7B300E360C8 /* NSString+Utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Utils.h"; sourceTree = "<group>"; };
+		6ED692E1211FD7B300E360C8 /* NSString+Utils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Utils.m"; sourceTree = "<group>"; };
+		6ED692E6211FDBB700E360C8 /* URAlertViewUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URAlertViewUtil.h; sourceTree = "<group>"; };
+		6ED692E7211FDBB700E360C8 /* URAlertViewUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = URAlertViewUtil.m; sourceTree = "<group>"; };
 		8FF53715C24B6BB25CDCEA35 /* Pods-URMission.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-URMission.debug.xcconfig"; path = "Pods/Target Support Files/Pods-URMission/Pods-URMission.debug.xcconfig"; sourceTree = "<group>"; };
 		F1E61CEAA09D5ECFBAD51482 /* Pods_URMission.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_URMission.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -215,6 +221,8 @@
 			children = (
 				6E1FE6D3210D97A300CE87ED /* URDataPickerView.h */,
 				6E1FE6D4210D97A300CE87ED /* URDataPickerView.m */,
+				6ED692E6211FDBB700E360C8 /* URAlertViewUtil.h */,
+				6ED692E7211FDBB700E360C8 /* URAlertViewUtil.m */,
 			);
 			path = commonView;
 			sourceTree = "<group>";
@@ -248,6 +256,8 @@
 				6E1FE6F121103E3700CE87ED /* NSDate+Utils.m */,
 				6E1FE6F321103EC900CE87ED /* NSDateFormatter+SharedObject.h */,
 				6E1FE6F421103EC900CE87ED /* NSDateFormatter+SharedObject.m */,
+				6ED692E0211FD7B300E360C8 /* NSString+Utils.h */,
+				6ED692E1211FD7B300E360C8 /* NSString+Utils.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -450,6 +460,7 @@
 				6E1FE6ED21103A4000CE87ED /* URLayoutConfig.m in Sources */,
 				6E1FE6CA210B313000CE87ED /* URCommonMarco.m in Sources */,
 				6E1FE6D1210C6AA500CE87ED /* URRotationPresentAnimation.m in Sources */,
+				6ED692E2211FD7B300E360C8 /* NSString+Utils.m in Sources */,
 				6E1FE6F221103E3700CE87ED /* NSDate+Utils.m in Sources */,
 				6E1FE6F521103EC900CE87ED /* NSDateFormatter+SharedObject.m in Sources */,
 				6E1FE6E42110061E00CE87ED /* URMissionModule.m in Sources */,
@@ -461,6 +472,7 @@
 				6E1FE693210B1C4900CE87ED /* AppDelegate.m in Sources */,
 				6E1FE6DB210DB39600CE87ED /* URMissionCardTableViewCell.m in Sources */,
 				6E1FE6D8210DA55C00CE87ED /* URMissionType.m in Sources */,
+				6ED692E8211FDBB700E360C8 /* URAlertViewUtil.m in Sources */,
 				6E1FE6D5210D97A300CE87ED /* URDataPickerView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

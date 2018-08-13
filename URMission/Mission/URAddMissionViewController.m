@@ -24,7 +24,7 @@
     self.view.backgroundColor = [UIColor colorWithWhite:1 alpha:0.3];
     // Do any additional setup after loading the view.
         
-    CGFloat top = ([UIScreen mainScreen].bounds.size.height - 360)/2;
+    CGFloat top = ([UIScreen mainScreen].bounds.size.height - 360)/2 - 100;
     CGFloat x = ([UIScreen mainScreen].bounds.size.width - 300)/2;
     self.missionView = [[URMissionAddView alloc] initWithFrame:CGRectMake(x, top, 300, 1)];
     self.missionView.clipsToBounds = YES;
@@ -43,7 +43,7 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    CGFloat top = ([UIScreen mainScreen].bounds.size.height - 360)/2;
+    CGFloat top = ([UIScreen mainScreen].bounds.size.height - 360)/2 - 100;
     CGFloat x = ([UIScreen mainScreen].bounds.size.width - 300)/2;
     WeakSelf
     [UIView animateWithDuration:1.5 animations:^{
@@ -54,6 +54,11 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+{
+    [self.view endEditing:YES];
 }
 
 /*

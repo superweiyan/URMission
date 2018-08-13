@@ -34,12 +34,14 @@
         
         self.okButton = [[UIButton alloc] init];
         self.okButton.backgroundColor = [UIColor redColor];
+        [self.okButton setTitle:@"确定" forState:UIControlStateNormal];
         [self.okButton addTarget:self action:@selector(onOKBtuClicked:) forControlEvents:UIControlEventTouchUpInside];
         [self addSubview:self.okButton];
         
         self.closeBtn = [[UIButton alloc] init];
         [self.closeBtn addTarget:self action:@selector(onCancelBtuClicked:) forControlEvents:UIControlEventTouchUpInside];
         self.closeBtn.backgroundColor = [UIColor blueColor];
+        [self.closeBtn setTitle:@"取消" forState:UIControlStateNormal];
         [self addSubview:self.closeBtn];
         
         self.datePicker = [[UIDatePicker alloc] init];
