@@ -9,4 +9,5 @@ target 'URMission' do
 	pod 'FMDB'
 	pod 'SVPullToRefresh'
 	pod 'Masonry'
+	pod 'FMDB'
 end

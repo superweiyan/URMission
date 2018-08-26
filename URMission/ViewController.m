@@ -16,7 +16,8 @@
 #import "URMissionModule.h"
 #import "URMissionType.h"
 
-@interface ViewController ()<UITableViewDelegate, UITableViewDataSource, UIViewControllerTransitioningDelegate, UINavigationControllerDelegate>
+@interface ViewController ()<UITableViewDelegate, UITableViewDataSource>
+//UIViewControllerTransitioningDelegate, UINavigationControllerDelegate>
 
 @property (nonatomic, strong) UITableView   *missionTableview;
 @property (nonatomic, strong) NSArray       *missionItemArray;
@@ -30,7 +31,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    self.navigationController.delegate = self;
+//    self.navigationController.delegate = self;
     [self initViews];
     [self loadData];
     [self addMission];
@@ -154,7 +155,7 @@
 //    }];
     
     URAddMissionViewController *controller = [[URAddMissionViewController alloc] init];
-    controller.transitioningDelegate = self;
+//    controller.transitioningDelegate = self;
     [self presentViewController:controller animated:NO completion:nil];
 }
 

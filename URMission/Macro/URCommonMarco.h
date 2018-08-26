@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-#define WeakSelf __weak __typeof(self) weakSelf = self;
+#define WeakSelf() __weak __typeof(self) weakSelf = self;
 
 
 #define jumpViewController(name)    id cls = [[NSClassFromString(name) alloc] init]; \
@@ -19,3 +19,6 @@
 NSLog(@"jumpViewController fail"); \
                                     }
 
+
+
+#define getViewWidth()  self.view.bounds.size.width

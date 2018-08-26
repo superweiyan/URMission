@@ -17,19 +17,21 @@
 		6E1FE6B6210B1C4B00CE87ED /* URMissionUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1FE6B5210B1C4B00CE87ED /* URMissionUITests.m */; };
 		6E1FE6C6210B2A6400CE87ED /* URMissionAddView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1FE6C5210B2A6400CE87ED /* URMissionAddView.m */; };
 		6E1FE6CA210B313000CE87ED /* URCommonMarco.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1FE6C8210B313000CE87ED /* URCommonMarco.m */; };
-		6E1FE6CE210C64F900CE87ED /* URAddMissionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1FE6CD210C64F900CE87ED /* URAddMissionViewController.m */; };
 		6E1FE6D1210C6AA500CE87ED /* URRotationPresentAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1FE6D0210C6AA500CE87ED /* URRotationPresentAnimation.m */; };
 		6E1FE6D5210D97A300CE87ED /* URDataPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1FE6D4210D97A300CE87ED /* URDataPickerView.m */; };
 		6E1FE6D8210DA55C00CE87ED /* URMissionType.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1FE6D7210DA55C00CE87ED /* URMissionType.m */; };
-		6E1FE6DB210DB39600CE87ED /* URMissionCardTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1FE6DA210DB39600CE87ED /* URMissionCardTableViewCell.m */; };
 		6E1FE6E42110061E00CE87ED /* URMissionModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1FE6E32110061E00CE87ED /* URMissionModule.m */; };
 		6E1FE6EC21103A4000CE87ED /* URColorConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1FE6E821103A4000CE87ED /* URColorConfig.m */; };
 		6E1FE6ED21103A4000CE87ED /* URLayoutConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1FE6E921103A4000CE87ED /* URLayoutConfig.m */; };
 		6E1FE6EE21103A4000CE87ED /* URPathConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1FE6EB21103A4000CE87ED /* URPathConfig.m */; };
 		6E1FE6F221103E3700CE87ED /* NSDate+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1FE6F121103E3700CE87ED /* NSDate+Utils.m */; };
 		6E1FE6F521103EC900CE87ED /* NSDateFormatter+SharedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1FE6F421103EC900CE87ED /* NSDateFormatter+SharedObject.m */; };
+		6EB3938021314E610071D1A6 /* URNewTaskNameView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB3937F21314E610071D1A6 /* URNewTaskNameView.m */; };
+		6EB39383213152520071D1A6 /* URNewTastTimeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB39382213152520071D1A6 /* URNewTastTimeView.m */; };
 		6ED692E2211FD7B300E360C8 /* NSString+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ED692E1211FD7B300E360C8 /* NSString+Utils.m */; };
 		6ED692E8211FDBB700E360C8 /* URAlertViewUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ED692E7211FDBB700E360C8 /* URAlertViewUtil.m */; };
+		6ED692F0212195AA00E360C8 /* URAddMissionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ED692EE212195AA00E360C8 /* URAddMissionViewController.m */; };
+		6ED692F3212195C500E360C8 /* URMissionCardTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ED692F1212195C500E360C8 /* URMissionCardTableViewCell.m */; };
 		F78A5A482A31C8D2AE1B75E5 /* Pods_URMission.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1E61CEAA09D5ECFBAD51482 /* Pods_URMission.framework */; };
 /* End PBXBuildFile section */
 
@@ -71,16 +73,12 @@
 		6E1FE6C5210B2A6400CE87ED /* URMissionAddView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = URMissionAddView.m; sourceTree = "<group>"; };
 		6E1FE6C8210B313000CE87ED /* URCommonMarco.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URCommonMarco.m; sourceTree = "<group>"; };
 		6E1FE6C9210B313000CE87ED /* URCommonMarco.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URCommonMarco.h; sourceTree = "<group>"; };
-		6E1FE6CC210C64F900CE87ED /* URAddMissionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URAddMissionViewController.h; sourceTree = "<group>"; };
-		6E1FE6CD210C64F900CE87ED /* URAddMissionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = URAddMissionViewController.m; sourceTree = "<group>"; };
 		6E1FE6CF210C6AA500CE87ED /* URRotationPresentAnimation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URRotationPresentAnimation.h; sourceTree = "<group>"; };
 		6E1FE6D0210C6AA500CE87ED /* URRotationPresentAnimation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = URRotationPresentAnimation.m; sourceTree = "<group>"; };
 		6E1FE6D3210D97A300CE87ED /* URDataPickerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URDataPickerView.h; sourceTree = "<group>"; };
 		6E1FE6D4210D97A300CE87ED /* URDataPickerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = URDataPickerView.m; sourceTree = "<group>"; };
 		6E1FE6D6210DA55C00CE87ED /* URMissionType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URMissionType.h; sourceTree = "<group>"; };
 		6E1FE6D7210DA55C00CE87ED /* URMissionType.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = URMissionType.m; sourceTree = "<group>"; };
-		6E1FE6D9210DB39600CE87ED /* URMissionCardTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URMissionCardTableViewCell.h; sourceTree = "<group>"; };
-		6E1FE6DA210DB39600CE87ED /* URMissionCardTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = URMissionCardTableViewCell.m; sourceTree = "<group>"; };
 		6E1FE6E22110061E00CE87ED /* URMissionModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URMissionModule.h; sourceTree = "<group>"; };
 		6E1FE6E32110061E00CE87ED /* URMissionModule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = URMissionModule.m; sourceTree = "<group>"; };
 		6E1FE6E621103A4000CE87ED /* URLayoutConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URLayoutConfig.h; sourceTree = "<group>"; };
@@ -94,10 +92,18 @@
 		6E1FE6F321103EC900CE87ED /* NSDateFormatter+SharedObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDateFormatter+SharedObject.h"; sourceTree = "<group>"; };
 		6E1FE6F421103EC900CE87ED /* NSDateFormatter+SharedObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDateFormatter+SharedObject.m"; sourceTree = "<group>"; };
 		6E30B2C81A72C14EC49410C6 /* Pods-URMission.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-URMission.release.xcconfig"; path = "Pods/Target Support Files/Pods-URMission/Pods-URMission.release.xcconfig"; sourceTree = "<group>"; };
+		6EB3937E21314E610071D1A6 /* URNewTaskNameView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URNewTaskNameView.h; sourceTree = "<group>"; };
+		6EB3937F21314E610071D1A6 /* URNewTaskNameView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URNewTaskNameView.m; sourceTree = "<group>"; };
+		6EB39381213152520071D1A6 /* URNewTastTimeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URNewTastTimeView.h; sourceTree = "<group>"; };
+		6EB39382213152520071D1A6 /* URNewTastTimeView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = URNewTastTimeView.m; sourceTree = "<group>"; };
 		6ED692E0211FD7B300E360C8 /* NSString+Utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Utils.h"; sourceTree = "<group>"; };
 		6ED692E1211FD7B300E360C8 /* NSString+Utils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Utils.m"; sourceTree = "<group>"; };
 		6ED692E6211FDBB700E360C8 /* URAlertViewUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URAlertViewUtil.h; sourceTree = "<group>"; };
 		6ED692E7211FDBB700E360C8 /* URAlertViewUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = URAlertViewUtil.m; sourceTree = "<group>"; };
+		6ED692EE212195AA00E360C8 /* URAddMissionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URAddMissionViewController.m; sourceTree = "<group>"; };
+		6ED692EF212195AA00E360C8 /* URAddMissionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URAddMissionViewController.h; sourceTree = "<group>"; };
+		6ED692F1212195C500E360C8 /* URMissionCardTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URMissionCardTableViewCell.m; sourceTree = "<group>"; };
+		6ED692F2212195C500E360C8 /* URMissionCardTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URMissionCardTableViewCell.h; sourceTree = "<group>"; };
 		8FF53715C24B6BB25CDCEA35 /* Pods-URMission.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-URMission.debug.xcconfig"; path = "Pods/Target Support Files/Pods-URMission/Pods-URMission.debug.xcconfig"; sourceTree = "<group>"; };
 		F1E61CEAA09D5ECFBAD51482 /* Pods_URMission.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_URMission.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -194,15 +200,13 @@
 		6E1FE6C3210B2A4A00CE87ED /* Mission */ = {
 			isa = PBXGroup;
 			children = (
+				6ED692ED2121957D00E360C8 /* View */,
+				6ED692EC2121957400E360C8 /* Controller */,
 				6E1FE6E12110023200CE87ED /* Module */,
 				6E1FE6C4210B2A6400CE87ED /* URMissionAddView.h */,
 				6E1FE6C5210B2A6400CE87ED /* URMissionAddView.m */,
-				6E1FE6CC210C64F900CE87ED /* URAddMissionViewController.h */,
-				6E1FE6CD210C64F900CE87ED /* URAddMissionViewController.m */,
 				6E1FE6D6210DA55C00CE87ED /* URMissionType.h */,
 				6E1FE6D7210DA55C00CE87ED /* URMissionType.m */,
-				6E1FE6D9210DB39600CE87ED /* URMissionCardTableViewCell.h */,
-				6E1FE6DA210DB39600CE87ED /* URMissionCardTableViewCell.m */,
 			);
 			path = Mission;
 			sourceTree = "<group>";
@@ -260,6 +264,28 @@
 				6ED692E1211FD7B300E360C8 /* NSString+Utils.m */,
 			);
 			path = Category;
+			sourceTree = "<group>";
+		};
+		6ED692EC2121957400E360C8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				6ED692EF212195AA00E360C8 /* URAddMissionViewController.h */,
+				6ED692EE212195AA00E360C8 /* URAddMissionViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		6ED692ED2121957D00E360C8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6EB3937E21314E610071D1A6 /* URNewTaskNameView.h */,
+				6EB3937F21314E610071D1A6 /* URNewTaskNameView.m */,
+				6ED692F2212195C500E360C8 /* URMissionCardTableViewCell.h */,
+				6ED692F1212195C500E360C8 /* URMissionCardTableViewCell.m */,
+				6EB39381213152520071D1A6 /* URNewTastTimeView.h */,
+				6EB39382213152520071D1A6 /* URNewTastTimeView.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		791BBBFE8B8C3F53F55338DF /* Frameworks */ = {
@@ -461,18 +487,20 @@
 				6E1FE6CA210B313000CE87ED /* URCommonMarco.m in Sources */,
 				6E1FE6D1210C6AA500CE87ED /* URRotationPresentAnimation.m in Sources */,
 				6ED692E2211FD7B300E360C8 /* NSString+Utils.m in Sources */,
+				6EB39383213152520071D1A6 /* URNewTastTimeView.m in Sources */,
 				6E1FE6F221103E3700CE87ED /* NSDate+Utils.m in Sources */,
 				6E1FE6F521103EC900CE87ED /* NSDateFormatter+SharedObject.m in Sources */,
 				6E1FE6E42110061E00CE87ED /* URMissionModule.m in Sources */,
-				6E1FE6CE210C64F900CE87ED /* URAddMissionViewController.m in Sources */,
+				6ED692F0212195AA00E360C8 /* URAddMissionViewController.m in Sources */,
+				6ED692F3212195C500E360C8 /* URMissionCardTableViewCell.m in Sources */,
 				6E1FE6A1210B1C4B00CE87ED /* main.m in Sources */,
 				6E1FE6EC21103A4000CE87ED /* URColorConfig.m in Sources */,
 				6E1FE6C6210B2A6400CE87ED /* URMissionAddView.m in Sources */,
 				6E1FE6EE21103A4000CE87ED /* URPathConfig.m in Sources */,
 				6E1FE693210B1C4900CE87ED /* AppDelegate.m in Sources */,
-				6E1FE6DB210DB39600CE87ED /* URMissionCardTableViewCell.m in Sources */,
 				6E1FE6D8210DA55C00CE87ED /* URMissionType.m in Sources */,
 				6ED692E8211FDBB700E360C8 /* URAlertViewUtil.m in Sources */,
+				6EB3938021314E610071D1A6 /* URNewTaskNameView.m in Sources */,
 				6E1FE6D5210D97A300CE87ED /* URDataPickerView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

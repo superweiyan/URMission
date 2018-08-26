@@ -172,7 +172,7 @@
         make.bottom.mas_equalTo(self.superview);
     }];
     
-    WeakSelf
+    WeakSelf()
     self.datePicker.cancelClicked = ^{
         [weakSelf.datePicker removeFromSuperview];
         weakSelf.datePicker = nil;
