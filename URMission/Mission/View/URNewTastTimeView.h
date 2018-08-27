@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "URNewBaseTaskView.h"
 
-@interface URNewTastTimeView : UIView
+@interface URNewTastTimeView : URNewBaseTaskView
 
 @end

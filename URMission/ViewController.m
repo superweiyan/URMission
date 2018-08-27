@@ -155,6 +155,10 @@
 //    }];
     
     URAddMissionViewController *controller = [[URAddMissionViewController alloc] init];
+    WeakSelf()
+    controller.popCallback = ^{
+        [weakSelf dismissViewControllerAnimated:YES completion:nil];
+    };
 //    controller.transitioningDelegate = self;
     [self presentViewController:controller animated:NO completion:nil];
 }

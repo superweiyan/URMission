@@ -7,11 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "URNewBaseTaskView.h"
 
-typedef void (^onNextClicked)(void);
-
-@interface URNewTaskNameView : UIView
-
-@property (nonatomic, copy)  onNextClicked  callback;
+@interface URNewTaskNameView : URNewBaseTaskView
 
 @end

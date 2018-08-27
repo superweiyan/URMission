@@ -21,13 +21,13 @@
 		6E1FE6D5210D97A300CE87ED /* URDataPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1FE6D4210D97A300CE87ED /* URDataPickerView.m */; };
 		6E1FE6D8210DA55C00CE87ED /* URMissionType.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1FE6D7210DA55C00CE87ED /* URMissionType.m */; };
 		6E1FE6E42110061E00CE87ED /* URMissionModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1FE6E32110061E00CE87ED /* URMissionModule.m */; };
-		6E1FE6EC21103A4000CE87ED /* URColorConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1FE6E821103A4000CE87ED /* URColorConfig.m */; };
-		6E1FE6ED21103A4000CE87ED /* URLayoutConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1FE6E921103A4000CE87ED /* URLayoutConfig.m */; };
-		6E1FE6EE21103A4000CE87ED /* URPathConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1FE6EB21103A4000CE87ED /* URPathConfig.m */; };
 		6E1FE6F221103E3700CE87ED /* NSDate+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1FE6F121103E3700CE87ED /* NSDate+Utils.m */; };
 		6E1FE6F521103EC900CE87ED /* NSDateFormatter+SharedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1FE6F421103EC900CE87ED /* NSDateFormatter+SharedObject.m */; };
 		6EB3938021314E610071D1A6 /* URNewTaskNameView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB3937F21314E610071D1A6 /* URNewTaskNameView.m */; };
 		6EB39383213152520071D1A6 /* URNewTastTimeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB39382213152520071D1A6 /* URNewTastTimeView.m */; };
+		6EB393872133EFC40071D1A6 /* URCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB393862133EFC40071D1A6 /* URCalendarView.m */; };
+		6EB3938A213404F60071D1A6 /* URMissionHeadLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB39389213404F60071D1A6 /* URMissionHeadLineView.m */; };
+		6EB3938D2134087F0071D1A6 /* URNewBaseTaskView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB3938C2134087F0071D1A6 /* URNewBaseTaskView.m */; };
 		6ED692E2211FD7B300E360C8 /* NSString+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ED692E1211FD7B300E360C8 /* NSString+Utils.m */; };
 		6ED692E8211FDBB700E360C8 /* URAlertViewUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ED692E7211FDBB700E360C8 /* URAlertViewUtil.m */; };
 		6ED692F0212195AA00E360C8 /* URAddMissionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ED692EE212195AA00E360C8 /* URAddMissionViewController.m */; };
@@ -81,12 +81,6 @@
 		6E1FE6D7210DA55C00CE87ED /* URMissionType.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = URMissionType.m; sourceTree = "<group>"; };
 		6E1FE6E22110061E00CE87ED /* URMissionModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URMissionModule.h; sourceTree = "<group>"; };
 		6E1FE6E32110061E00CE87ED /* URMissionModule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = URMissionModule.m; sourceTree = "<group>"; };
-		6E1FE6E621103A4000CE87ED /* URLayoutConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URLayoutConfig.h; sourceTree = "<group>"; };
-		6E1FE6E721103A4000CE87ED /* URPathConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URPathConfig.h; sourceTree = "<group>"; };
-		6E1FE6E821103A4000CE87ED /* URColorConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URColorConfig.m; sourceTree = "<group>"; };
-		6E1FE6E921103A4000CE87ED /* URLayoutConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URLayoutConfig.m; sourceTree = "<group>"; };
-		6E1FE6EA21103A4000CE87ED /* URColorConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URColorConfig.h; sourceTree = "<group>"; };
-		6E1FE6EB21103A4000CE87ED /* URPathConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URPathConfig.m; sourceTree = "<group>"; };
 		6E1FE6F021103E3700CE87ED /* NSDate+Utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDate+Utils.h"; sourceTree = "<group>"; };
 		6E1FE6F121103E3700CE87ED /* NSDate+Utils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Utils.m"; sourceTree = "<group>"; };
 		6E1FE6F321103EC900CE87ED /* NSDateFormatter+SharedObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDateFormatter+SharedObject.h"; sourceTree = "<group>"; };
@@ -96,6 +90,12 @@
 		6EB3937F21314E610071D1A6 /* URNewTaskNameView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URNewTaskNameView.m; sourceTree = "<group>"; };
 		6EB39381213152520071D1A6 /* URNewTastTimeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URNewTastTimeView.h; sourceTree = "<group>"; };
 		6EB39382213152520071D1A6 /* URNewTastTimeView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = URNewTastTimeView.m; sourceTree = "<group>"; };
+		6EB393852133EFC40071D1A6 /* URCalendarView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URCalendarView.h; sourceTree = "<group>"; };
+		6EB393862133EFC40071D1A6 /* URCalendarView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = URCalendarView.m; sourceTree = "<group>"; };
+		6EB39388213404F60071D1A6 /* URMissionHeadLineView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URMissionHeadLineView.h; sourceTree = "<group>"; };
+		6EB39389213404F60071D1A6 /* URMissionHeadLineView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = URMissionHeadLineView.m; sourceTree = "<group>"; };
+		6EB3938B2134087F0071D1A6 /* URNewBaseTaskView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URNewBaseTaskView.h; sourceTree = "<group>"; };
+		6EB3938C2134087F0071D1A6 /* URNewBaseTaskView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = URNewBaseTaskView.m; sourceTree = "<group>"; };
 		6ED692E0211FD7B300E360C8 /* NSString+Utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Utils.h"; sourceTree = "<group>"; };
 		6ED692E1211FD7B300E360C8 /* NSString+Utils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Utils.m"; sourceTree = "<group>"; };
 		6ED692E6211FDBB700E360C8 /* URAlertViewUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URAlertViewUtil.h; sourceTree = "<group>"; };
@@ -227,6 +227,8 @@
 				6E1FE6D4210D97A300CE87ED /* URDataPickerView.m */,
 				6ED692E6211FDBB700E360C8 /* URAlertViewUtil.h */,
 				6ED692E7211FDBB700E360C8 /* URAlertViewUtil.m */,
+				6EB393852133EFC40071D1A6 /* URCalendarView.h */,
+				6EB393862133EFC40071D1A6 /* URCalendarView.m */,
 			);
 			path = commonView;
 			sourceTree = "<group>";
@@ -243,12 +245,6 @@
 		6E1FE6E521103A4000CE87ED /* CommonConfig */ = {
 			isa = PBXGroup;
 			children = (
-				6E1FE6E621103A4000CE87ED /* URLayoutConfig.h */,
-				6E1FE6E721103A4000CE87ED /* URPathConfig.h */,
-				6E1FE6E821103A4000CE87ED /* URColorConfig.m */,
-				6E1FE6E921103A4000CE87ED /* URLayoutConfig.m */,
-				6E1FE6EA21103A4000CE87ED /* URColorConfig.h */,
-				6E1FE6EB21103A4000CE87ED /* URPathConfig.m */,
 			);
 			path = CommonConfig;
 			sourceTree = "<group>";
@@ -284,6 +280,10 @@
 				6ED692F1212195C500E360C8 /* URMissionCardTableViewCell.m */,
 				6EB39381213152520071D1A6 /* URNewTastTimeView.h */,
 				6EB39382213152520071D1A6 /* URNewTastTimeView.m */,
+				6EB39388213404F60071D1A6 /* URMissionHeadLineView.h */,
+				6EB39389213404F60071D1A6 /* URMissionHeadLineView.m */,
+				6EB3938B2134087F0071D1A6 /* URNewBaseTaskView.h */,
+				6EB3938C2134087F0071D1A6 /* URNewBaseTaskView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -462,6 +462,7 @@
 				"${BUILT_PRODUCTS_DIR}/FMDB/FMDB.framework",
 				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
 				"${BUILT_PRODUCTS_DIR}/SVPullToRefresh/SVPullToRefresh.framework",
+				"${BUILT_PRODUCTS_DIR}/URUtilKit/URUtilKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -469,6 +470,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FMDB.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVPullToRefresh.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/URUtilKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -483,25 +485,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				6E1FE696210B1C4900CE87ED /* ViewController.m in Sources */,
-				6E1FE6ED21103A4000CE87ED /* URLayoutConfig.m in Sources */,
 				6E1FE6CA210B313000CE87ED /* URCommonMarco.m in Sources */,
+				6EB3938A213404F60071D1A6 /* URMissionHeadLineView.m in Sources */,
 				6E1FE6D1210C6AA500CE87ED /* URRotationPresentAnimation.m in Sources */,
 				6ED692E2211FD7B300E360C8 /* NSString+Utils.m in Sources */,
 				6EB39383213152520071D1A6 /* URNewTastTimeView.m in Sources */,
 				6E1FE6F221103E3700CE87ED /* NSDate+Utils.m in Sources */,
 				6E1FE6F521103EC900CE87ED /* NSDateFormatter+SharedObject.m in Sources */,
+				6EB3938D2134087F0071D1A6 /* URNewBaseTaskView.m in Sources */,
 				6E1FE6E42110061E00CE87ED /* URMissionModule.m in Sources */,
 				6ED692F0212195AA00E360C8 /* URAddMissionViewController.m in Sources */,
 				6ED692F3212195C500E360C8 /* URMissionCardTableViewCell.m in Sources */,
 				6E1FE6A1210B1C4B00CE87ED /* main.m in Sources */,
-				6E1FE6EC21103A4000CE87ED /* URColorConfig.m in Sources */,
 				6E1FE6C6210B2A6400CE87ED /* URMissionAddView.m in Sources */,
-				6E1FE6EE21103A4000CE87ED /* URPathConfig.m in Sources */,
 				6E1FE693210B1C4900CE87ED /* AppDelegate.m in Sources */,
 				6E1FE6D8210DA55C00CE87ED /* URMissionType.m in Sources */,
 				6ED692E8211FDBB700E360C8 /* URAlertViewUtil.m in Sources */,
 				6EB3938021314E610071D1A6 /* URNewTaskNameView.m in Sources */,
 				6E1FE6D5210D97A300CE87ED /* URDataPickerView.m in Sources */,
+				6EB393872133EFC40071D1A6 /* URCalendarView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

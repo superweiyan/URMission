@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+typedef void (^onPopViewController)(void);
+
 @interface URAddMissionViewController : UIViewController
+
+@property (nonatomic, copy) onPopViewController  popCallback;
 
 @end
