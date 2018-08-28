@@ -109,28 +109,6 @@
             currentView.frame = CGRectMake(15, 60, getViewWidth() - 30, 300);
         }];
     }];
-
-    
-//    stepView.frame = CGRectMake(getViewWidth(), 60, getViewWidth() - 30, 300);
-//    [self.view addSubview:stepView];
-//
-//    if (step > 0) {
-//        UIView *currentView = [self.missionArray objectAtIndex:(step - 1)];
-//        [UIView animateWithDuration:1 animations:^{
-//            currentView.frame = CGRectMake(-getViewWidth(), 60, getViewWidth() - 30, 300);
-//        }completion:^(BOOL finished) {
-//
-//            [UIView animateWithDuration:1 animations:^{
-//                stepView.frame = CGRectMake(15, 60, getViewWidth() - 30, 300);
-//            }];
-//        }];
-//    }
-//    else {
-//        stepView.frame = CGRectMake(getViewWidth(), 60, getViewWidth() - 30, 300);
-//        [UIView animateWithDuration:1 animations:^{
-//            stepView.frame = CGRectMake(15, 60, getViewWidth() - 30, 300);
-//        }];
-//    }
 }
 
 - (void)playAddMission

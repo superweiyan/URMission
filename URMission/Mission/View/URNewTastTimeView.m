@@ -9,6 +9,7 @@
 #import "URNewTastTimeView.h"
 #import "URCalendarView.h"
 #import "Masonry.h"
+#import "URMissionHeadLineView.h"
 
 @interface URNewTastTimeView()
 
@@ -39,7 +40,10 @@
         self.calendarView = [[URCalendarView alloc] init];
         [self addSubview:self.calendarView];
         [self.calendarView mas_makeConstraints:^(MASConstraintMaker *make) {
-            
+            make.leading.mas_equalTo(self).mas_offset(5);
+            make.trailing.mas_equalTo(self).mas_offset(-5);
+            make.top.mas_equalTo(self.headLineView.mas_bottom).mas_offset(5);
+            make.bottom.mas_equalTo(self).mas_offset(-5);
         }];
     }
     return self;

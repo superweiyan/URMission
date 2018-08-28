@@ -10,6 +10,16 @@
 
 @interface NSDate (Utils)
 
+- (NSUInteger)getMonth;
+
+- (NSUInteger)getDay;
+
+- (NSUInteger)getYear;
+
+- (NSUInteger)getMonthDays;
+
+- (NSUInteger)getWeeksInMonth;
+
 + (BOOL)isToday:(NSDate *)otherDate;
 
 + (NSDate *)getToday;
@@ -33,5 +43,13 @@
 + (NSString *)formatTimeWithMinuteAndSecond:(int64_t)time dayCountFromNow:(NSUInteger *)count;
 
 + (NSString *)converData:(NSDate *)date;
+
++ (NSInteger)getFirstDayWeekForMonth:(NSDate*)date;
+
+//时间格式为 yyyy-MM-dd
++ (NSDate *)getCalendarFromString:(NSString *)string format:(NSString *)format;
+
++ (NSString *)theDateConversionStr:(NSDate *)date format:(NSString *)format;
+
 
 @end

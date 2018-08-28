@@ -11,11 +11,48 @@
 
 @implementation NSDate (Utils)
 
+- (NSUInteger)getYear
+{
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    NSDateComponents *comps = [calendar components:NSCalendarUnitYear|NSCalendarUnitMonth|NSCalendarUnitDay|NSCalendarUnitWeekday
+                                          fromDate:self];
+    NSInteger year = [comps year];
+    return year;
+}
+
+
+- (NSUInteger)getMonth
+{
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    NSDateComponents *comps = [calendar components:NSCalendarUnitYear|NSCalendarUnitMonth|NSCalendarUnitDay|NSCalendarUnitWeekday fromDate:self];
+    NSInteger month = [comps month];
+    return month;
+}
+
+- (NSUInteger)getDay
+{
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    NSUInteger unitFlags = NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay | NSCalendarUnitWeekday;
+    NSDateComponents *dateComponent = [calendar components:unitFlags fromDate:self];
+    return (int)dateComponent.day;
+}
+
+- (NSUInteger)getMonthDays
+{
+    return [[NSCalendar currentCalendar] rangeOfUnit:NSCalendarUnitDay inUnit:NSCalendarUnitMonth
+                                             forDate:self].length;
+}
+
+- (NSUInteger)getWeeksInMonth
+{
+    return [[NSCalendar currentCalendar] rangeOfUnit:NSCalendarUnitWeekOfMonth inUnit:NSCalendarUnitMonth
+                                             forDate:self].length;
+}
+
 + (BOOL)isToday:(NSDate *)otherDate
 {
     return [[NSCalendar currentCalendar] isDateInToday:otherDate];
 }
-
 
 + (NSDate *)getToday
 {
@@ -47,7 +84,8 @@
     
 }
 
-+ (NSString *)formatTimeWithMinuteAndSecond:(int64_t)time dayCountFromNow:(NSUInteger *)count {
++ (NSString *)formatTimeWithMinuteAndSecond:(int64_t)time dayCountFromNow:(NSUInteger *)count
+{
     NSDate *nowDate = [NSDate date];
     NSDate *nextDate = [NSDate dateWithTimeIntervalSince1970:time];
     NSDateFormatter *dateFormatter = [NSDateFormatter sharedObject];
@@ -120,4 +158,50 @@
     NSDateComponents *cmps = [calendar components:unit fromDate:date];
     return [weeks objectAtIndex:cmps.weekday];
 }
+
++ (NSInteger)getFirstDayWeekForMonth:(NSDate*)date
+{
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    NSDateComponents *comps = [calendar components:NSCalendarUnitYear|NSCalendarUnitMonth|NSCalendarUnitDay|NSCalendarUnitWeekday fromDate:date];
+    NSInteger weekday = [comps weekday];
+    weekday--;
+    if (weekday == 7) {
+        return 0;
+    }
+    else {
+        return weekday;
+    }
+}
+
+
++ (NSDate *)getCalendarFromString:(NSString *)string format:(NSString *)format
+{
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    if (format.length == 0) {
+        [formatter setDateFormat:@"yyyy-MM-dd"];
+    }
+    else {
+        [formatter setDateFormat:format];
+    }
+    
+    NSDate *date=[formatter dateFromString:string];
+    return date;
+}
+
++ (NSString * )theDateConversionStr:(NSDate * )date format:(NSString *)format
+{
+    NSDateFormatter* formatter = [[NSDateFormatter alloc] init];
+    //实例化一个NSDateFormatter对象
+    if (format.length == 0) {
+        [formatter setDateFormat:@"yyyy-MM-dd"];
+    }
+    else {
+        [formatter setDateFormat:format];
+    }
+    //设定时间格式,这里可以设置成自己需要的格式
+    NSString *currentDateStr = [formatter stringFromDate:date];
+    // 根据自己需求处理字符串 return
+    return [currentDateStr substringToIndex:7];
+}
+
 @end
