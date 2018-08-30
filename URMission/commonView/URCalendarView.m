@@ -67,13 +67,16 @@
 {
     self.monthArray = [[NSMutableArray alloc] init];
     NSUInteger month = [self getDateToInt:[NSDate date]];
-    [self.monthArray addObject:[self calcCalenderItem:month]];
+    for(int i = 0; i < 3; i++) {
+        [self.monthArray addObject:[self calcCalenderItem:month]];
+        month = [self getNextMonth:month];
+    }
     [self.calenderTableView reloadData];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 1;
+    return self.monthArray.count;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -111,7 +114,7 @@
 {
     int month = current % 100;
     
-    if (month == 11) {
+    if (month == 12) {
         current += 89;
     }
     else {
@@ -123,7 +126,7 @@
 - (NSUInteger)getLastMonth:(NSUInteger)current
 {
     int month = current % 100;
-    if (month == 00) {
+    if (month == 1) {
         current -= 89;
     }
     else {
@@ -150,7 +153,7 @@
 + (CGFloat)getCellHeight:(URCalendarItem *)item
 {
     // 顶部空隙 + 月份 + 星期行数 + 底部空隙
-    return  15 + 30 + item.weekLine * 45 + 15;
+    return  5 + 45 + item.weekLine * 45 + 5;
 }
 
 + (NSString *)converMonthToString:(NSUInteger)month

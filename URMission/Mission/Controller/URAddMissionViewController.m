@@ -55,14 +55,14 @@
 
 - (void)initMission
 {
-    URNewTaskNameView *taskName = [[URNewTaskNameView alloc] initWithFrame:self.view.bounds];
+    URNewTaskNameView *taskName = [[URNewTaskNameView alloc] initWithFrame:CGRectMake(getViewWidth(), 60, 300, 300)];
     [taskName updateHeadline:@"写下任务的名字"];
     WeakSelf()
     taskName.optCallback = ^(BOOL isForward) {
         [weakSelf handleTaskItem:isForward];
     };
     
-    URNewTastTimeView *taskTime = [[URNewTastTimeView alloc] initWithFrame:self.view.bounds];
+    URNewTastTimeView *taskTime = [[URNewTastTimeView alloc] initWithFrame:CGRectMake(getViewWidth(), 60, 300, 500)];
     taskTime.optCallback = ^(BOOL isForward) {
         [weakSelf handleTaskItem:isForward];
     };
@@ -98,15 +98,20 @@
         return ;
     }
     
-    UIView *stepView = [self.missionArray objectAtIndex:self.stepIndex];
+    URNewBaseTaskView *stepView = [self.missionArray objectAtIndex:self.stepIndex];
     self.stepIndex -= 1;
     
+    CGRect rect = stepView.frame;
+    WeakSelf()
     [UIView animateWithDuration:0.5 animations:^{
-        stepView.frame = CGRectMake(getViewWidth(), 60, getViewWidth() - 30, 300);
+        stepView.frame = CGRectMake(getViewWidth(), rect.origin.y, rect.size.width, rect.size.height);
     }completion:^(BOOL finished) {
-        UIView *currentView = [self.missionArray objectAtIndex:self.stepIndex];
+        UIView *currentView = [weakSelf.missionArray objectAtIndex:weakSelf.stepIndex];
         [UIView animateWithDuration:0.5 animations:^{
-            currentView.frame = CGRectMake(15, 60, getViewWidth() - 30, 300);
+            currentView.frame = CGRectMake((getViewWidth() - rect.size.width)/2,
+                                           rect.origin.y,
+                                           rect.size.width,
+                                           rect.size.height);
         }];
     }];
 }
@@ -117,25 +122,30 @@
         return ;
     }
         
-    UIView *stepView = [self.missionArray objectAtIndex:self.stepIndex];
-    stepView.frame = CGRectMake(getViewWidth(), 60, getViewWidth() - 30, 300);
+    URNewBaseTaskView *stepView = [self.missionArray objectAtIndex:self.stepIndex];
+    CGRect rect = stepView.frame;
+    
+    stepView.frame = CGRectMake(getViewWidth(), rect.origin.y, rect.size.width, rect.size.height);
     [self.view addSubview:stepView];
     
     if (self.stepIndex > 0) {
-        UIView *currentView = [self.missionArray objectAtIndex:(self.stepIndex - 1)];
+        URNewBaseTaskView *currentView = [self.missionArray objectAtIndex:(self.stepIndex - 1)];
+        [currentView resignFirstResponder];
+        
+        CGRect currentRect = currentView.frame;
         [UIView animateWithDuration:0.5 animations:^{
-            currentView.frame = CGRectMake(-getViewWidth(), 60, getViewWidth() - 30, 300);
+            currentView.frame = CGRectMake(-getViewWidth(), currentRect.origin.y, currentRect.size.width, currentRect.size.height);
         }completion:^(BOOL finished) {
             
             [UIView animateWithDuration:0.5 animations:^{
-                stepView.frame = CGRectMake(15, 60, getViewWidth() - 30, 300);
+                stepView.frame = CGRectMake((getViewWidth() - rect.size.width)/2, rect.origin.y, rect.size.width, rect.size.height);
             }];
         }];
     }
     else {
-        stepView.frame = CGRectMake(getViewWidth(), 60, getViewWidth() - 30, 300);
+        stepView.frame = CGRectMake((getViewWidth() - rect.size.width)/2, rect.origin.y, rect.size.width, rect.size.height);
         [UIView animateWithDuration:1 animations:^{
-            stepView.frame = CGRectMake(15, 60, getViewWidth() - 30, 300);
+            stepView.frame = CGRectMake((getViewWidth() - rect.size.width)/2, rect.origin.y, rect.size.width, rect.size.height);
         }];
     }
     

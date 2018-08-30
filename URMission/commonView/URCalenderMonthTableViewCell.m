@@ -37,9 +37,9 @@
     if (self) {
         
         UICollectionViewFlowLayout *layout = [UICollectionViewFlowLayout new];
-        layout.itemSize                    = CGSizeMake(35, 35);
+//        layout.itemSize                    = CGSizeMake(35, 40);
         layout.sectionInset                = UIEdgeInsetsMake(3, 3, 3, 3);
-        layout.minimumInteritemSpacing     = 10.f; // 横向排列最小间距
+//        layout.minimumInteritemSpacing     = 10.f; // 横向排列最小间距
         layout.minimumLineSpacing          = 5.0f; // 纵向排列最小间距
         
         self.dayCollectionView = [[UICollectionView alloc] initWithFrame:self.bounds collectionViewLayout:layout];
@@ -70,6 +70,14 @@
     [self.dayCollectionView reloadData];
 }
 
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+//    if (indexPath.row < 7) {
+//        return CGSizeMake(35, 30);
+//    }
+    return CGSizeMake(35, 40);
+}
+
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
     return 7 + _item.weekLine * 7;
@@ -84,6 +92,9 @@
             NSUInteger m = _item.yMonth % 100;
             cell.day = @(m).stringValue;
         }
+        else {
+            cell.day = @"";
+        }
         return cell;
     }
     else {
@@ -93,10 +104,19 @@
             NSUInteger day = indexPath.row - 7 - _item.startWeek;
             cell.day = @(day + 1).stringValue;
         }
+        else {
+            cell.day = @"";
+        }
         return cell;
     }
     
     return [UICollectionViewCell new];
+}
+
+- (CGFloat)collectionView:(UICollectionView *)collectionView
+                   layout:(UICollectionViewLayout*)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section
+{
+    return (self.bounds.size.width - 7 * 35)/8.0;
 }
 
 #pragma mark - delegate

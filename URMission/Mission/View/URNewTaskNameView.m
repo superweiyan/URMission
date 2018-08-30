@@ -11,9 +11,14 @@
 #import "URCommonMarco.h"
 #import "URMissionHeadLineView.h"
 
+typedef void(^tempBlock)(BOOL) ;
+
 @interface URNewTaskNameView()
 
-@property (nonatomic, strong) UITextView                *textView;
+@property (nonatomic, strong) UITextView     *textView;
+
+//
+@property (nonatomic, strong) tempBlock      block;
 
 @end
 
@@ -44,6 +49,23 @@
         }];
     }
     return self;
+}
+
+/**
+ *  这个地方纯粹只是想试试效果的一个偏门写法，在父类用delegate是更好的选择
+ */
+- (void)setOptCallback:(TaskOptCallback)optCallback
+{
+    self.block = optCallback;
+    
+    WeakSelf()
+    void (^v)(BOOL) = ^(BOOL isForward){
+        [weakSelf.textView resignFirstResponder];
+        if (weakSelf.block) {
+            weakSelf.block(isForward);
+        }
+    };
+    [super setOptCallback:v];
 }
 
 
