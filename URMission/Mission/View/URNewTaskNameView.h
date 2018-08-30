@@ -9,6 +9,11 @@
 #import <UIKit/UIKit.h>
 #import "URNewBaseTaskView.h"
 
+@class URMissionModel;
+
+typedef void (^NewTaskNameCallback)(NSString *);
 @interface URNewTaskNameView : URNewBaseTaskView
+
+@property (nonatomic, strong) NewTaskNameCallback  taskNameBlock;
 
 @end

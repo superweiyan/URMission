@@ -10,8 +10,13 @@
 
 @class URCalendarItem;
 
+typedef void (^onCalenderItemClickCallback)(NSDate *);
+
 @interface URCalenderMonthTableViewCell : UITableViewCell
 
-@property (nonatomic, strong) URCalendarItem *item;
+@property (nonatomic, strong) URCalendarItem            *item;
+@property (nonatomic, copy) onCalenderItemClickCallback itemClickBlock;
+
+- (void)updateSelectRange:(NSDate *)start end:(NSDate *)end;
 
 @end

@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+typedef void(^ItemClickedCallback) (NSDate *);
+
 @interface URCalendarView : UIView
+
+@property (nonatomic, copy) ItemClickedCallback  itemClickedBlock;
 
 @end

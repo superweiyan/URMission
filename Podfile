@@ -11,4 +11,5 @@ target 'URMission' do
 	pod 'Masonry'
 	pod 'FMDB'
 	pod 'URUtilKit'
+	pod 'ProgressHUD'
 end

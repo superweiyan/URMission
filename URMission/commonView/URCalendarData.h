@@ -10,7 +10,8 @@
 
 @interface URCalendarItem : NSObject
 
-@property (nonatomic, assign) NSUInteger    yMonth;
+@property (nonatomic, assign) NSUInteger    year;
+@property (nonatomic, assign) NSUInteger    month;
 @property (nonatomic, assign) NSUInteger    startWeek;  //1号是星期几
 @property (nonatomic, assign) NSUInteger    monthDay;   //这个月有几天
 @property (nonatomic, assign) NSUInteger    weekLine;  //这个月有几行

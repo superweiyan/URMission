@@ -10,6 +10,9 @@
 #import "Masonry.h"
 #import "URCommonMarco.h"
 #import "URMissionHeadLineView.h"
+#import "ProgressHUD.h"
+#import "URMissionType.h"
+
 
 typedef void(^tempBlock)(BOOL) ;
 
@@ -60,6 +63,16 @@ typedef void(^tempBlock)(BOOL) ;
     
     WeakSelf()
     void (^v)(BOOL) = ^(BOOL isForward){
+        
+        if (isForward && weakSelf.textView.text.length == 0) {
+            [ProgressHUD showError:@"写个任务名字吧"];
+            return ;
+        }
+        
+        if(isForward) {
+            [weakSelf handleNameClicked:weakSelf.textView.text];
+        }
+        
         [weakSelf.textView resignFirstResponder];
         if (weakSelf.block) {
             weakSelf.block(isForward);
@@ -68,5 +81,11 @@ typedef void(^tempBlock)(BOOL) ;
     [super setOptCallback:v];
 }
 
+- (void)handleNameClicked:(NSString *)txt
+{
+    if(self.taskNameBlock) {
+        self.taskNameBlock(txt);
+    }
+}
 
 @end

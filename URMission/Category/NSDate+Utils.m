@@ -49,6 +49,11 @@
                                              forDate:self].length;
 }
 
+- (NSUInteger)getYearMonthForNumber
+{
+    return [self getYear] * 10000 + [self getMonth] * 100 + [self getDay];
+}
+
 + (BOOL)isToday:(NSDate *)otherDate
 {
     return [[NSCalendar currentCalendar] isDateInToday:otherDate];

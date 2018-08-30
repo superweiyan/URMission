@@ -32,6 +32,7 @@
 		6EB393932134EEBB0071D1A6 /* URCalenderMonthTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB393922134EEBB0071D1A6 /* URCalenderMonthTableViewCell.m */; };
 		6EB3939721356C080071D1A6 /* URMonthItemCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB3939621356C080071D1A6 /* URMonthItemCollectionViewCell.m */; };
 		6EB3939A213574A10071D1A6 /* URMonthInfoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB39399213574A10071D1A6 /* URMonthInfoCollectionViewCell.m */; };
+		6EB3939E213792B30071D1A6 /* URWeekTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB3939D213792B30071D1A6 /* URWeekTitleView.m */; };
 		6ED692E2211FD7B300E360C8 /* NSString+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ED692E1211FD7B300E360C8 /* NSString+Utils.m */; };
 		6ED692E8211FDBB700E360C8 /* URAlertViewUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ED692E7211FDBB700E360C8 /* URAlertViewUtil.m */; };
 		6ED692F0212195AA00E360C8 /* URAddMissionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ED692EE212195AA00E360C8 /* URAddMissionViewController.m */; };
@@ -108,6 +109,8 @@
 		6EB3939621356C080071D1A6 /* URMonthItemCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = URMonthItemCollectionViewCell.m; sourceTree = "<group>"; };
 		6EB39398213574A10071D1A6 /* URMonthInfoCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URMonthInfoCollectionViewCell.h; sourceTree = "<group>"; };
 		6EB39399213574A10071D1A6 /* URMonthInfoCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = URMonthInfoCollectionViewCell.m; sourceTree = "<group>"; };
+		6EB3939C213792B30071D1A6 /* URWeekTitleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URWeekTitleView.h; sourceTree = "<group>"; };
+		6EB3939D213792B30071D1A6 /* URWeekTitleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = URWeekTitleView.m; sourceTree = "<group>"; };
 		6ED692E0211FD7B300E360C8 /* NSString+Utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Utils.h"; sourceTree = "<group>"; };
 		6ED692E1211FD7B300E360C8 /* NSString+Utils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Utils.m"; sourceTree = "<group>"; };
 		6ED692E6211FDBB700E360C8 /* URAlertViewUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URAlertViewUtil.h; sourceTree = "<group>"; };
@@ -249,6 +252,8 @@
 				6EB3939621356C080071D1A6 /* URMonthItemCollectionViewCell.m */,
 				6EB39398213574A10071D1A6 /* URMonthInfoCollectionViewCell.h */,
 				6EB39399213574A10071D1A6 /* URMonthInfoCollectionViewCell.m */,
+				6EB3939C213792B30071D1A6 /* URWeekTitleView.h */,
+				6EB3939D213792B30071D1A6 /* URWeekTitleView.m */,
 			);
 			path = commonView;
 			sourceTree = "<group>";
@@ -481,6 +486,7 @@
 				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
 				"${BUILT_PRODUCTS_DIR}/FMDB/FMDB.framework",
 				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
+				"${BUILT_PRODUCTS_DIR}/ProgressHUD/ProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/SVPullToRefresh/SVPullToRefresh.framework",
 				"${BUILT_PRODUCTS_DIR}/URUtilKit/URUtilKit.framework",
 			);
@@ -489,6 +495,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FMDB.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVPullToRefresh.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/URUtilKit.framework",
 			);
@@ -508,6 +515,7 @@
 				6EB3939721356C080071D1A6 /* URMonthItemCollectionViewCell.m in Sources */,
 				6EB393932134EEBB0071D1A6 /* URCalenderMonthTableViewCell.m in Sources */,
 				6E1FE6CA210B313000CE87ED /* URCommonMarco.m in Sources */,
+				6EB3939E213792B30071D1A6 /* URWeekTitleView.m in Sources */,
 				6EB3938A213404F60071D1A6 /* URMissionHeadLineView.m in Sources */,
 				6E1FE6D1210C6AA500CE87ED /* URRotationPresentAnimation.m in Sources */,
 				6ED692E2211FD7B300E360C8 /* NSString+Utils.m in Sources */,
@@ -701,10 +709,7 @@
 				DEVELOPMENT_TEAM = PJD5F25QWG;
 				INFOPLIST_FILE = URMission/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.unreal.URMission;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -720,10 +725,7 @@
 				DEVELOPMENT_TEAM = PJD5F25QWG;
 				INFOPLIST_FILE = URMission/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.unreal.URMission;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -737,11 +739,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PJD5F25QWG;
 				INFOPLIST_FILE = URMissionTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.unreal.URMissionTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -756,11 +754,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PJD5F25QWG;
 				INFOPLIST_FILE = URMissionTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.unreal.URMissionTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -774,11 +768,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PJD5F25QWG;
 				INFOPLIST_FILE = URMissionUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.unreal.URMissionUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -792,11 +782,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PJD5F25QWG;
 				INFOPLIST_FILE = URMissionUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.unreal.URMissionUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";

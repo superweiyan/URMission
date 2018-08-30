@@ -18,6 +18,8 @@
 @property (nonatomic, strong) NSArray       *missionArray;
 @property (nonatomic, assign) NSUInteger     stepIndex;
 
+@property (nonatomic, strong) URMissionModel    *missionModel;
+
 @end
 
 @implementation URAddMissionViewController
@@ -29,6 +31,7 @@
     self.stepIndex = 0;
     
     [self initMission];
+    [self initData];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -53,6 +56,11 @@
     [self.view endEditing:YES];
 }
 
+- (void)initData
+{
+    self.missionModel = [[URMissionModel alloc] init];
+}
+
 - (void)initMission
 {
     URNewTaskNameView *taskName = [[URNewTaskNameView alloc] initWithFrame:CGRectMake(getViewWidth(), 60, 300, 300)];
@@ -62,13 +70,23 @@
         [weakSelf handleTaskItem:isForward];
     };
     
+    taskName.taskNameBlock = ^(NSString * taskName) {
+        weakSelf.missionModel.missionName = taskName;
+    };
+    
     URNewTastTimeView *taskTime = [[URNewTastTimeView alloc] initWithFrame:CGRectMake(getViewWidth(), 60, 300, 500)];
     taskTime.optCallback = ^(BOOL isForward) {
         [weakSelf handleTaskItem:isForward];
     };
 
+    taskTime.taskTimeCallback = ^(NSDate *date) {
+        [weakSelf handleDay:date];
+    };
+    
     self.missionArray = @[taskName, taskTime];
 }
+
+#pragma mark - 切换任务片段
 
 - (void)handleTaskItem:(BOOL)isForward
 {
@@ -148,7 +166,22 @@
             stepView.frame = CGRectMake((getViewWidth() - rect.size.width)/2, rect.origin.y, rect.size.width, rect.size.height);
         }];
     }
-    
+}
+
+#pragma mark - update mission day
+
+- (void)handleDay:(NSDate *)date
+{
+    NSDate *startData = self.missionModel.startDate;
+    if (date.timeIntervalSince1970 < startData.timeIntervalSince1970 ) {
+        self.missionModel.startDate = date;
+    }
+    else {
+        NSDate *endData = self.missionModel.endDate;
+        if (date.timeIntervalSince1970 > endData.timeIntervalSince1970) {
+            self.missionModel.endDate = endData;
+        }
+    }
 }
 
 @end

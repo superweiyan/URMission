@@ -10,12 +10,15 @@
 #import "URCalendarData.h"
 #import "URCalenderMonthTableViewCell.h"
 #import "NSDate+Utils.h"
+#import "URCommonMarco.h"
 
 @interface URCalendarView()<UITableViewDelegate, UITableViewDataSource>
 
-@property (nonatomic, strong) UITableView   *calenderTableView;
-
+@property (nonatomic, strong) UITableView       *calenderTableView;
 @property (nonatomic, strong) NSMutableArray    *monthArray;
+
+@property (nonatomic, strong) NSDate    *startDate;
+@property (nonatomic, strong) NSDate    *endDate;
 
 @end
 
@@ -92,12 +95,21 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     URCalenderMonthTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"URCalenderMonthTableViewCell"];
+    
+    WeakSelf()
+    cell.itemClickBlock = ^(NSDate * itemData) {
+        if(weakSelf.itemClickedBlock) {
+            [weakSelf handleDay:itemData];
+            weakSelf.itemClickedBlock(itemData);
+        }
+    };
 
     if (indexPath.row < self.monthArray.count) {
         URCalendarItem *item = [self.monthArray objectAtIndex:indexPath.row];
         cell.item = item;
-        
     }
+    
+    [cell updateSelectRange:self.startDate end:self.endDate];
     return cell;
 }
 
@@ -141,7 +153,8 @@
     NSDate *itemDate = [NSDate getCalendarFromString:monthString format:@"yyyy-MM"];
     
     URCalendarItem *item = [[URCalendarItem alloc] init];
-    item.yMonth = month;
+    item.month = month % 100 ;
+    item.year = month / 100;
     item.startWeek = [NSDate getFirstDayWeekForMonth:itemDate];
     item.monthDay = [itemDate getMonthDays];
     item.weekLine = [itemDate getWeeksInMonth];
@@ -164,6 +177,40 @@
         return [NSString stringWithFormat:@"%ld-0%ld", y, m];
     }
     return [NSString stringWithFormat:@"%ld-%ld", y, m];
+}
+
+- (void)handleDay:(NSDate *)date
+{
+    if (!self.startDate) {
+        self.startDate = date;
+        self.endDate = date;
+    }
+    else {
+        if (date.timeIntervalSince1970 < self.startDate.timeIntervalSince1970 ) {
+            self.startDate = date;
+        }
+        else if (date.timeIntervalSince1970 == self.startDate.timeIntervalSince1970){
+            if (self.endDate && self.startDate.timeIntervalSince1970 != self.endDate.timeIntervalSince1970) {
+                self.startDate = [self.startDate dateByAddingTimeInterval:24*60*60];
+            }
+            else {
+                self.startDate = nil;
+            }
+        }
+        else if (date.timeIntervalSince1970 > self.endDate.timeIntervalSince1970) {
+            self.endDate = date;
+        }
+        else if (date.timeIntervalSince1970 == self.endDate.timeIntervalSince1970) {
+            if (self.startDate && self.startDate.timeIntervalSince1970 != self.endDate.timeIntervalSince1970) {
+                self.endDate = [self.endDate dateByAddingTimeInterval:-24*60*60];
+            }
+            else {
+                self.endDate = nil;
+            }
+        }
+    }
+    
+    [self.calenderTableView reloadData];
 }
 
 @end

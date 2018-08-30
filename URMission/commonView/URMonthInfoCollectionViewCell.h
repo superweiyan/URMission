@@ -10,6 +10,6 @@
 
 @interface URMonthInfoCollectionViewCell : UICollectionViewCell
 
-@property (nonatomic, strong) NSString *day;
+- (void)updateStatus:(NSString *)day isSelect:(BOOL)isSelect hasTask:(BOOL)hasTask;
 
 @end

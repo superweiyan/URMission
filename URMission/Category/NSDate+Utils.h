@@ -20,6 +20,10 @@
 
 - (NSUInteger)getWeeksInMonth;
 
+- (NSUInteger)getYearMonthForNumber;
+
+//- (NSDate *)getEarlyData;
+
 + (BOOL)isToday:(NSDate *)otherDate;
 
 + (NSDate *)getToday;
@@ -50,6 +54,5 @@
 + (NSDate *)getCalendarFromString:(NSString *)string format:(NSString *)format;
 
 + (NSString *)theDateConversionStr:(NSDate *)date format:(NSString *)format;
-
 
 @end

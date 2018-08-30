@@ -14,6 +14,11 @@
 @property (nonatomic, strong) UILabel   *dayLabel;
 @property (nonatomic, strong) UILabel   *statusLabel;
 
+@property (nonatomic, strong) NSString *day;
+@property (nonatomic, assign) BOOL  selectStatus;
+@property (nonatomic, assign) BOOL  hadTaskStatus;
+
+
 @end
 
 @implementation URMonthInfoCollectionViewCell
@@ -54,12 +59,20 @@
     self.statusLabel.frame = CGRectMake(0, self.bounds.size.height - 8 , self.bounds.size.width, 8);
 }
 
-- (void)setDay:(NSString *)day
+//- (void)setDay:(NSString *)day
+//{
+//    _day = day;
+//    self.dayLabel.text = day;
+////    self.bottomView.hidden = self.dayLabel.text.length == 0;
+////    self.statusLabel.hidden = self.dayLabel.text.length == 0;
+//}
+
+- (void)updateStatus:(NSString *)day isSelect:(BOOL)isSelect hasTask:(BOOL)hasTask
 {
     _day = day;
     self.dayLabel.text = day;
-//    self.bottomView.hidden = self.dayLabel.text.length == 0;
-    self.statusLabel.hidden = self.dayLabel.text.length == 0;
+    self.bottomView.hidden = !isSelect;
+    self.statusLabel.hidden = !hasTask;
 }
 
 @end

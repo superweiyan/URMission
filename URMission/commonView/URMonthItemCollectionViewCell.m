@@ -21,6 +21,7 @@
     self = [super initWithFrame:frame];
     if (self) {
         self.dayLabel = [[UILabel alloc] init];
+        self.dayLabel.font = [UIFont systemFontOfSize:15];
         self.dayLabel.textAlignment = NSTextAlignmentCenter;
         [self addSubview:self.dayLabel];
     }
@@ -36,7 +37,13 @@
 - (void)setDay:(NSString *)day
 {
     _day = day;
-    self.dayLabel.text = day;
+    if (day.length > 0) {
+        self.dayLabel.text = [NSString stringWithFormat:@"%@月", day];
+    }
+    else {
+        self.dayLabel.text = @"";
+    }
+    
 }
 
 @end

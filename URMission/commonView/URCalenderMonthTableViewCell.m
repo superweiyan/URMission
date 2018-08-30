@@ -10,11 +10,16 @@
 #import "URCalendarData.h"
 #import "URMonthItemCollectionViewCell.h"
 #import "URMonthInfoCollectionViewCell.h"
+#import "NSDate+Utils.h"
+#import "URCommonMarco.h"
 
 @interface URCalenderMonthTableViewCell()<UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 
 @property (nonatomic, strong) UICollectionView  *dayCollectionView;
 @property (nonatomic, strong) NSArray           *itemArray;
+
+@property (nonatomic, assign) NSUInteger        startTime;
+@property (nonatomic, assign) NSUInteger        endTime;
 
 @end
 
@@ -60,7 +65,6 @@
 - (void)layoutSubviews
 {
     [super layoutSubviews];
-    
     self.dayCollectionView.frame = self.bounds;
 }
 
@@ -72,9 +76,6 @@
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-//    if (indexPath.row < 7) {
-//        return CGSizeMake(35, 30);
-//    }
     return CGSizeMake(35, 40);
 }
 
@@ -89,7 +90,7 @@
         
         URMonthItemCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"URMonthItemCollectionViewCell" forIndexPath:indexPath];
         if (indexPath.row == _item.startWeek) {
-            NSUInteger m = _item.yMonth % 100;
+            NSUInteger m = _item.month;
             cell.day = @(m).stringValue;
         }
         else {
@@ -102,10 +103,12 @@
 
         if (indexPath.row > 7 + _item.startWeek - 1 && indexPath.row < 7 + _item.startWeek + _item.monthDay) {
             NSUInteger day = indexPath.row - 7 - _item.startWeek;
-            cell.day = @(day + 1).stringValue;
+            
+            BOOL hadStatus = [self hadSelectStatus:(day+1)];
+            [cell updateStatus:@(day + 1).stringValue isSelect:hadStatus hasTask:NO];
         }
         else {
-            cell.day = @"";
+            [cell updateStatus:@"" isSelect:NO hasTask:NO];
         }
         return cell;
     }
@@ -119,8 +122,44 @@
     return (self.bounds.size.width - 7 * 35)/8.0;
 }
 
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    if(indexPath.row < 7 + _item.startWeek) {
+        return ;
+    }
+    
+    WeakSelf()
+    if(self.itemClickBlock){
+        NSDate *date = [weakSelf generateData:(indexPath.row - 7 - _item.startWeek + 1)];
+        self.itemClickBlock(date);
+    }
+}
+
 #pragma mark - delegate
 
+- (NSDate *)generateData:(NSUInteger)day
+{
+    NSString *dayString = [NSString stringWithFormat:@"%ld-%ld-%ld", _item.year, _item.month, day];
+    
+    return [NSDate getCalendarFromString:dayString format:nil];
+}
 
+- (void)updateSelectRange:(NSDate *)start end:(NSDate *)end
+{
+    self.startTime = [start getYearMonthForNumber];
+    self.endTime = [end getYearMonthForNumber];
+}
+
+- (BOOL)hadSelectStatus:(NSUInteger)day
+{
+    if (self.startTime == 0) {
+        return NO;
+    }
+    NSUInteger currentDay = _item.year * 10000 + _item.month * 100 + day;
+    if ( currentDay < self.startTime  || currentDay > self.endTime ) {
+        return NO;
+    }
+    return YES;
+}
 
 @end

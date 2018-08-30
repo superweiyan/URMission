@@ -9,6 +9,10 @@
 #import <UIKit/UIKit.h>
 #import "URNewBaseTaskView.h"
 
+typedef void (^NewTaskTimeCallback) (NSDate *);
+
 @interface URNewTastTimeView : URNewBaseTaskView
+
+@property (nonatomic, copy) NewTaskTimeCallback  taskTimeCallback;
 
 @end
