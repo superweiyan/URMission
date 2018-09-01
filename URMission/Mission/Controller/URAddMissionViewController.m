@@ -12,6 +12,7 @@
 #import "URMissionModule.h"
 #import "URNewTaskNameView.h"
 #import "URNewTastTimeView.h"
+#import "URNewTaskSettingView.h"
 
 @interface URAddMissionViewController ()
 
@@ -83,7 +84,9 @@
         [weakSelf handleDay:date];
     };
     
-    self.missionArray = @[taskName, taskTime];
+    URNewTaskSettingView *settingView = [[URNewTaskSettingView alloc] initWithFrame:CGRectMake(getViewWidth(), 60, 300, 400)];
+    
+    self.missionArray = @[taskName, taskTime, settingView];
 }
 
 #pragma mark - 切换任务片段
