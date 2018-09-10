@@ -21,8 +21,6 @@
 		6E1FE6D5210D97A300CE87ED /* URDataPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1FE6D4210D97A300CE87ED /* URDataPickerView.m */; };
 		6E1FE6D8210DA55C00CE87ED /* URMissionType.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1FE6D7210DA55C00CE87ED /* URMissionType.m */; };
 		6E1FE6E42110061E00CE87ED /* URMissionModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1FE6E32110061E00CE87ED /* URMissionModule.m */; };
-		6E1FE6F221103E3700CE87ED /* NSDate+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1FE6F121103E3700CE87ED /* NSDate+Utils.m */; };
-		6E1FE6F521103EC900CE87ED /* NSDateFormatter+SharedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1FE6F421103EC900CE87ED /* NSDateFormatter+SharedObject.m */; };
 		6EB393872133EFC40071D1A6 /* URCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB393862133EFC40071D1A6 /* URCalendarView.m */; };
 		6EB3939021342CCE0071D1A6 /* URCalendarData.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB3938F21342CCE0071D1A6 /* URCalendarData.m */; };
 		6EB393932134EEBB0071D1A6 /* URCalenderMonthTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB393922134EEBB0071D1A6 /* URCalenderMonthTableViewCell.m */; };
@@ -35,7 +33,6 @@
 		6EB393B2213A9CE10071D1A6 /* URNewTastTimeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB393AE213A9CE00071D1A6 /* URNewTastTimeView.m */; };
 		6EB393B8213A9DD50071D1A6 /* URNewTaskSettingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB393B7213A9DD50071D1A6 /* URNewTaskSettingView.m */; };
 		6EB393BD213D6B480071D1A6 /* URMultiSelectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB393BC213D6B480071D1A6 /* URMultiSelectView.m */; };
-		6ED692E2211FD7B300E360C8 /* NSString+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ED692E1211FD7B300E360C8 /* NSString+Utils.m */; };
 		6ED692E8211FDBB700E360C8 /* URAlertViewUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ED692E7211FDBB700E360C8 /* URAlertViewUtil.m */; };
 		6ED692F0212195AA00E360C8 /* URAddMissionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ED692EE212195AA00E360C8 /* URAddMissionViewController.m */; };
 		6ED692F3212195C500E360C8 /* URMissionCardTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ED692F1212195C500E360C8 /* URMissionCardTableViewCell.m */; };
@@ -88,10 +85,6 @@
 		6E1FE6D7210DA55C00CE87ED /* URMissionType.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = URMissionType.m; sourceTree = "<group>"; };
 		6E1FE6E22110061E00CE87ED /* URMissionModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URMissionModule.h; sourceTree = "<group>"; };
 		6E1FE6E32110061E00CE87ED /* URMissionModule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = URMissionModule.m; sourceTree = "<group>"; };
-		6E1FE6F021103E3700CE87ED /* NSDate+Utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDate+Utils.h"; sourceTree = "<group>"; };
-		6E1FE6F121103E3700CE87ED /* NSDate+Utils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Utils.m"; sourceTree = "<group>"; };
-		6E1FE6F321103EC900CE87ED /* NSDateFormatter+SharedObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDateFormatter+SharedObject.h"; sourceTree = "<group>"; };
-		6E1FE6F421103EC900CE87ED /* NSDateFormatter+SharedObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDateFormatter+SharedObject.m"; sourceTree = "<group>"; };
 		6E30B2C81A72C14EC49410C6 /* Pods-URMission.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-URMission.release.xcconfig"; path = "Pods/Target Support Files/Pods-URMission/Pods-URMission.release.xcconfig"; sourceTree = "<group>"; };
 		6EB393852133EFC40071D1A6 /* URCalendarView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URCalendarView.h; sourceTree = "<group>"; };
 		6EB393862133EFC40071D1A6 /* URCalendarView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = URCalendarView.m; sourceTree = "<group>"; };
@@ -117,8 +110,6 @@
 		6EB393B7213A9DD50071D1A6 /* URNewTaskSettingView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = URNewTaskSettingView.m; sourceTree = "<group>"; };
 		6EB393BB213D6B480071D1A6 /* URMultiSelectView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URMultiSelectView.h; sourceTree = "<group>"; };
 		6EB393BC213D6B480071D1A6 /* URMultiSelectView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = URMultiSelectView.m; sourceTree = "<group>"; };
-		6ED692E0211FD7B300E360C8 /* NSString+Utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Utils.h"; sourceTree = "<group>"; };
-		6ED692E1211FD7B300E360C8 /* NSString+Utils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Utils.m"; sourceTree = "<group>"; };
 		6ED692E6211FDBB700E360C8 /* URAlertViewUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URAlertViewUtil.h; sourceTree = "<group>"; };
 		6ED692E7211FDBB700E360C8 /* URAlertViewUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = URAlertViewUtil.m; sourceTree = "<group>"; };
 		6ED692EE212195AA00E360C8 /* URAddMissionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URAddMissionViewController.m; sourceTree = "<group>"; };
@@ -285,12 +276,6 @@
 		6E1FE6EF21103DF800CE87ED /* Category */ = {
 			isa = PBXGroup;
 			children = (
-				6E1FE6F021103E3700CE87ED /* NSDate+Utils.h */,
-				6E1FE6F121103E3700CE87ED /* NSDate+Utils.m */,
-				6E1FE6F321103EC900CE87ED /* NSDateFormatter+SharedObject.h */,
-				6E1FE6F421103EC900CE87ED /* NSDateFormatter+SharedObject.m */,
-				6ED692E0211FD7B300E360C8 /* NSString+Utils.h */,
-				6ED692E1211FD7B300E360C8 /* NSString+Utils.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -536,9 +521,6 @@
 				6E1FE6CA210B313000CE87ED /* URCommonMarco.m in Sources */,
 				6EB3939E213792B30071D1A6 /* URWeekTitleView.m in Sources */,
 				6E1FE6D1210C6AA500CE87ED /* URRotationPresentAnimation.m in Sources */,
-				6ED692E2211FD7B300E360C8 /* NSString+Utils.m in Sources */,
-				6E1FE6F221103E3700CE87ED /* NSDate+Utils.m in Sources */,
-				6E1FE6F521103EC900CE87ED /* NSDateFormatter+SharedObject.m in Sources */,
 				6EB3939A213574A10071D1A6 /* URMonthInfoCollectionViewCell.m in Sources */,
 				6E1FE6E42110061E00CE87ED /* URMissionModule.m in Sources */,
 				6EB393B8213A9DD50071D1A6 /* URNewTaskSettingView.m in Sources */,
