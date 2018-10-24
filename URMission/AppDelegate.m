@@ -7,16 +7,46 @@
 //
 
 #import "AppDelegate.h"
+#import "URMissionScheduleViewController.h"
+#import "URNavigateController.h"
 
-@interface AppDelegate ()
+@interface AppDelegate ()<UITabBarDelegate>
 
 @end
 
 @implementation AppDelegate
 
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
     // Override point for customization after application launch.
+    
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    self.window.backgroundColor = [UIColor whiteColor];
+    
+    UITabBarController *tabbarController = [[UITabBarController alloc] init];
+    
+    URMissionScheduleViewController *scheduleController = [[URMissionScheduleViewController alloc] init];
+    scheduleController.title = @"计划";
+    scheduleController.tabBarItem.title = @"计划";
+    URNavigateController *navigationController = [[URNavigateController alloc] initWithRootViewController:scheduleController];
+    
+    UIViewController *UIViewController1 = [[UIViewController alloc] init];
+    UIViewController1.tabBarItem.title = @"任务";
+    UIViewController1.title = @"任务";
+    URNavigateController *navigationController1 = [[URNavigateController alloc] initWithRootViewController:UIViewController1];
+
+    UIViewController *UIViewController2 = [[UIViewController alloc] init];
+    UIViewController2.tabBarItem.title = @"我";
+    UIViewController2.title = @"我";
+    URNavigateController *navigationController2 = [[URNavigateController alloc] initWithRootViewController:UIViewController2];
+
+    tabbarController.tabBar.tintColor = [UIColor redColor];
+    tabbarController.viewControllers = @[navigationController, navigationController1, navigationController2];
+    
+    self.window.rootViewController = tabbarController;
+    //2.设置Window为主窗口并显示出来
+    [self.window makeKeyAndVisible];
     return YES;
 }
 
@@ -47,5 +77,10 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+
+- (void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item
+{
+    
+}
 
 @end

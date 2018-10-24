@@ -13,6 +13,8 @@
 
 + (instancetype)sharedObject;
 
+- (NSArray *)getTagArray;
+
 - (void)addMission:(URMissionModel *)model;
 
 - (NSArray *)getMission;

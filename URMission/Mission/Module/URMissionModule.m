@@ -7,10 +7,13 @@
 //
 
 #import "URMissionModule.h"
+#import "URPathConfig.h"
 
 @interface URMissionModule()
 
 @property (nonatomic, strong) NSMutableArray    *missionArray;
+@property (nonatomic, strong) NSArray           *tagArray;
+
 @end
 
 @implementation URMissionModule
@@ -32,6 +35,20 @@
         self.missionArray = [[NSMutableArray alloc] init];
     }
     return self;
+}
+
+- (NSArray *)getTagArray
+{
+    if(!self.tagArray){
+        NSString *path = [URPathConfig loadNSBundleResurce:@"tagConfig.json"];
+        NSData *data = [[NSData alloc] initWithContentsOfFile:path];
+        NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
+        if (json) {
+            self.tagArray = [json objectForKey:@"tag"];
+        }
+    }
+    
+    return self.tagArray;
 }
 
 - (void)addMission:(URMissionModel *)model

@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6E07420D21479D7E0053D51E /* tagConfig.json in Resources */ = {isa = PBXBuildFile; fileRef = 6E07420C21479D7E0053D51E /* tagConfig.json */; };
+		6E07421B2147B0D80053D51E /* NSString+Json.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E07421A2147B0D80053D51E /* NSString+Json.m */; };
+		6E07421E2147BC270053D51E /* URScrolSelectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E07421D2147BC270053D51E /* URScrolSelectView.m */; };
+		6E0742212147C6E80053D51E /* URMissionSelectTagView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E0742202147C6E80053D51E /* URMissionSelectTagView.m */; };
+		6E074246215221D70053D51E /* URTaskTagView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E074245215221D70053D51E /* URTaskTagView.m */; };
 		6E1FE693210B1C4900CE87ED /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1FE692210B1C4900CE87ED /* AppDelegate.m */; };
 		6E1FE696210B1C4900CE87ED /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1FE695210B1C4900CE87ED /* ViewController.m */; };
 		6E1FE699210B1C4900CE87ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E1FE697210B1C4900CE87ED /* Main.storyboard */; };
@@ -21,6 +26,15 @@
 		6E1FE6D5210D97A300CE87ED /* URDataPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1FE6D4210D97A300CE87ED /* URDataPickerView.m */; };
 		6E1FE6D8210DA55C00CE87ED /* URMissionType.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1FE6D7210DA55C00CE87ED /* URMissionType.m */; };
 		6E1FE6E42110061E00CE87ED /* URMissionModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1FE6E32110061E00CE87ED /* URMissionModule.m */; };
+		6E352FDB217ECC0400E12EC5 /* URMissionScheduleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E352FDA217ECC0400E12EC5 /* URMissionScheduleViewController.m */; };
+		6E352FE5217EFB6600E12EC5 /* URNavigateController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E352FE4217EFB6600E12EC5 /* URNavigateController.m */; };
+		6E352FE8217F0D5A00E12EC5 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E352FE7217F0D5A00E12EC5 /* QuartzCore.framework */; };
+		6E352FEB217F173C00E12EC5 /* UIView+Shadow.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E352FEA217F173C00E12EC5 /* UIView+Shadow.m */; };
+		6E352FEE217F1A6600E12EC5 /* URTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E352FED217F1A6600E12EC5 /* URTextField.m */; };
+		6E352FF2217F23FC00E12EC5 /* URNewMissionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E352FF0217F23FC00E12EC5 /* URNewMissionViewController.m */; };
+		6E352FF5217F245100E12EC5 /* NewMissionToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E352FF4217F245100E12EC5 /* NewMissionToolBar.m */; };
+		6E352FFA217F482700E12EC5 /* URDataSelectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E352FF9217F482700E12EC5 /* URDataSelectView.m */; };
+		6EA34870217F5473009F8427 /* URDatePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EA3486F217F5473009F8427 /* URDatePickerView.m */; };
 		6EB393872133EFC40071D1A6 /* URCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB393862133EFC40071D1A6 /* URCalendarView.m */; };
 		6EB3939021342CCE0071D1A6 /* URCalendarData.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB3938F21342CCE0071D1A6 /* URCalendarData.m */; };
 		6EB393932134EEBB0071D1A6 /* URCalenderMonthTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB393922134EEBB0071D1A6 /* URCalenderMonthTableViewCell.m */; };
@@ -57,6 +71,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6E07420C21479D7E0053D51E /* tagConfig.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = tagConfig.json; sourceTree = "<group>"; };
+		6E0742192147B0D80053D51E /* NSString+Json.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Json.h"; sourceTree = "<group>"; };
+		6E07421A2147B0D80053D51E /* NSString+Json.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Json.m"; sourceTree = "<group>"; };
+		6E07421C2147BC270053D51E /* URScrolSelectView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URScrolSelectView.h; sourceTree = "<group>"; };
+		6E07421D2147BC270053D51E /* URScrolSelectView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = URScrolSelectView.m; sourceTree = "<group>"; };
+		6E07421F2147C6E80053D51E /* URMissionSelectTagView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URMissionSelectTagView.h; sourceTree = "<group>"; };
+		6E0742202147C6E80053D51E /* URMissionSelectTagView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = URMissionSelectTagView.m; sourceTree = "<group>"; };
+		6E074244215221D70053D51E /* URTaskTagView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URTaskTagView.h; sourceTree = "<group>"; };
+		6E074245215221D70053D51E /* URTaskTagView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = URTaskTagView.m; sourceTree = "<group>"; };
 		6E1FE68E210B1C4900CE87ED /* URMission.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = URMission.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E1FE691210B1C4900CE87ED /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6E1FE692210B1C4900CE87ED /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -86,6 +109,23 @@
 		6E1FE6E22110061E00CE87ED /* URMissionModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URMissionModule.h; sourceTree = "<group>"; };
 		6E1FE6E32110061E00CE87ED /* URMissionModule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = URMissionModule.m; sourceTree = "<group>"; };
 		6E30B2C81A72C14EC49410C6 /* Pods-URMission.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-URMission.release.xcconfig"; path = "Pods/Target Support Files/Pods-URMission/Pods-URMission.release.xcconfig"; sourceTree = "<group>"; };
+		6E352FD9217ECC0400E12EC5 /* URMissionScheduleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URMissionScheduleViewController.h; sourceTree = "<group>"; };
+		6E352FDA217ECC0400E12EC5 /* URMissionScheduleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = URMissionScheduleViewController.m; sourceTree = "<group>"; };
+		6E352FE3217EFB6600E12EC5 /* URNavigateController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URNavigateController.h; sourceTree = "<group>"; };
+		6E352FE4217EFB6600E12EC5 /* URNavigateController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = URNavigateController.m; sourceTree = "<group>"; };
+		6E352FE7217F0D5A00E12EC5 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		6E352FE9217F173C00E12EC5 /* UIView+Shadow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Shadow.h"; sourceTree = "<group>"; };
+		6E352FEA217F173C00E12EC5 /* UIView+Shadow.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Shadow.m"; sourceTree = "<group>"; };
+		6E352FEC217F1A6600E12EC5 /* URTextField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URTextField.h; sourceTree = "<group>"; };
+		6E352FED217F1A6600E12EC5 /* URTextField.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = URTextField.m; sourceTree = "<group>"; };
+		6E352FF0217F23FC00E12EC5 /* URNewMissionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URNewMissionViewController.m; sourceTree = "<group>"; };
+		6E352FF1217F23FC00E12EC5 /* URNewMissionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URNewMissionViewController.h; sourceTree = "<group>"; };
+		6E352FF3217F245100E12EC5 /* NewMissionToolBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewMissionToolBar.h; sourceTree = "<group>"; };
+		6E352FF4217F245100E12EC5 /* NewMissionToolBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewMissionToolBar.m; sourceTree = "<group>"; };
+		6E352FF8217F482700E12EC5 /* URDataSelectView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URDataSelectView.h; sourceTree = "<group>"; };
+		6E352FF9217F482700E12EC5 /* URDataSelectView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = URDataSelectView.m; sourceTree = "<group>"; };
+		6EA3486E217F5473009F8427 /* URDatePickerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URDatePickerView.h; sourceTree = "<group>"; };
+		6EA3486F217F5473009F8427 /* URDatePickerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = URDatePickerView.m; sourceTree = "<group>"; };
 		6EB393852133EFC40071D1A6 /* URCalendarView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URCalendarView.h; sourceTree = "<group>"; };
 		6EB393862133EFC40071D1A6 /* URCalendarView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = URCalendarView.m; sourceTree = "<group>"; };
 		6EB3938E21342CCE0071D1A6 /* URCalendarData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URCalendarData.h; sourceTree = "<group>"; };
@@ -125,6 +165,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E352FE8217F0D5A00E12EC5 /* QuartzCore.framework in Frameworks */,
 				F78A5A482A31C8D2AE1B75E5 /* Pods_URMission.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -146,6 +187,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6E07420721467D270053D51E /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				6E07420C21479D7E0053D51E /* tagConfig.json */,
+				6E0742192147B0D80053D51E /* NSString+Json.h */,
+				6E07421A2147B0D80053D51E /* NSString+Json.m */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
 		6E1FE685210B1C4900CE87ED = {
 			isa = PBXGroup;
 			children = (
@@ -171,6 +222,9 @@
 		6E1FE690210B1C4900CE87ED /* URMission */ = {
 			isa = PBXGroup;
 			children = (
+				6E352FE2217EFB4800E12EC5 /* Utils */,
+				6E352FD8217ECBE300E12EC5 /* MissionTab */,
+				6E07420721467D270053D51E /* Config */,
 				6E1FE6EF21103DF800CE87ED /* Category */,
 				6E1FE6E521103A4000CE87ED /* CommonConfig */,
 				6E1FE6D2210D954B00CE87ED /* commonView */,
@@ -269,6 +323,8 @@
 		6E1FE6E521103A4000CE87ED /* CommonConfig */ = {
 			isa = PBXGroup;
 			children = (
+				6E07421C2147BC270053D51E /* URScrolSelectView.h */,
+				6E07421D2147BC270053D51E /* URScrolSelectView.m */,
 			);
 			path = CommonConfig;
 			sourceTree = "<group>";
@@ -278,6 +334,68 @@
 			children = (
 			);
 			path = Category;
+			sourceTree = "<group>";
+		};
+		6E352FD8217ECBE300E12EC5 /* MissionTab */ = {
+			isa = PBXGroup;
+			children = (
+				6E352FDD217EF7F600E12EC5 /* Controller */,
+				6E352FDC217EF7F600E12EC5 /* module */,
+				6E352FDE217EF7F600E12EC5 /* view */,
+				6E352FD9217ECC0400E12EC5 /* URMissionScheduleViewController.h */,
+				6E352FDA217ECC0400E12EC5 /* URMissionScheduleViewController.m */,
+			);
+			path = MissionTab;
+			sourceTree = "<group>";
+		};
+		6E352FDC217EF7F600E12EC5 /* module */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = module;
+			sourceTree = "<group>";
+		};
+		6E352FDD217EF7F600E12EC5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				6E352FEF217F23FC00E12EC5 /* NewMission */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		6E352FDE217EF7F600E12EC5 /* view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		6E352FE2217EFB4800E12EC5 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				6E352FE3217EFB6600E12EC5 /* URNavigateController.h */,
+				6E352FE4217EFB6600E12EC5 /* URNavigateController.m */,
+				6E352FE9217F173C00E12EC5 /* UIView+Shadow.h */,
+				6E352FEA217F173C00E12EC5 /* UIView+Shadow.m */,
+				6E352FEC217F1A6600E12EC5 /* URTextField.h */,
+				6E352FED217F1A6600E12EC5 /* URTextField.m */,
+				6EA3486E217F5473009F8427 /* URDatePickerView.h */,
+				6EA3486F217F5473009F8427 /* URDatePickerView.m */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		6E352FEF217F23FC00E12EC5 /* NewMission */ = {
+			isa = PBXGroup;
+			children = (
+				6E352FF0217F23FC00E12EC5 /* URNewMissionViewController.m */,
+				6E352FF1217F23FC00E12EC5 /* URNewMissionViewController.h */,
+				6E352FF3217F245100E12EC5 /* NewMissionToolBar.h */,
+				6E352FF4217F245100E12EC5 /* NewMissionToolBar.m */,
+				6E352FF8217F482700E12EC5 /* URDataSelectView.h */,
+				6E352FF9217F482700E12EC5 /* URDataSelectView.m */,
+			);
+			path = NewMission;
 			sourceTree = "<group>";
 		};
 		6EB393A6213A9CAF0071D1A6 /* Create */ = {
@@ -293,6 +411,10 @@
 				6EB393AE213A9CE00071D1A6 /* URNewTastTimeView.m */,
 				6EB393B6213A9DD50071D1A6 /* URNewTaskSettingView.h */,
 				6EB393B7213A9DD50071D1A6 /* URNewTaskSettingView.m */,
+				6E07421F2147C6E80053D51E /* URMissionSelectTagView.h */,
+				6E0742202147C6E80053D51E /* URMissionSelectTagView.m */,
+				6E074244215221D70053D51E /* URTaskTagView.h */,
+				6E074245215221D70053D51E /* URTaskTagView.m */,
 			);
 			path = Create;
 			sourceTree = "<group>";
@@ -319,6 +441,7 @@
 		791BBBFE8B8C3F53F55338DF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6E352FE7217F0D5A00E12EC5 /* QuartzCore.framework */,
 				F1E61CEAA09D5ECFBAD51482 /* Pods_URMission.framework */,
 			);
 			name = Frameworks;
@@ -438,6 +561,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E07420D21479D7E0053D51E /* tagConfig.json in Resources */,
 				6E1FE69E210B1C4B00CE87ED /* LaunchScreen.storyboard in Resources */,
 				6E1FE69B210B1C4B00CE87ED /* Assets.xcassets in Resources */,
 				6E1FE699210B1C4900CE87ED /* Main.storyboard in Resources */,
@@ -515,27 +639,39 @@
 			buildActionMask = 2147483647;
 			files = (
 				6EB393B0213A9CE10071D1A6 /* URNewBaseTaskView.m in Sources */,
+				6E0742212147C6E80053D51E /* URMissionSelectTagView.m in Sources */,
 				6E1FE696210B1C4900CE87ED /* ViewController.m in Sources */,
+				6E074246215221D70053D51E /* URTaskTagView.m in Sources */,
 				6EB3939721356C080071D1A6 /* URMonthItemCollectionViewCell.m in Sources */,
 				6EB393932134EEBB0071D1A6 /* URCalenderMonthTableViewCell.m in Sources */,
+				6E352FE5217EFB6600E12EC5 /* URNavigateController.m in Sources */,
 				6E1FE6CA210B313000CE87ED /* URCommonMarco.m in Sources */,
 				6EB3939E213792B30071D1A6 /* URWeekTitleView.m in Sources */,
 				6E1FE6D1210C6AA500CE87ED /* URRotationPresentAnimation.m in Sources */,
 				6EB3939A213574A10071D1A6 /* URMonthInfoCollectionViewCell.m in Sources */,
+				6EA34870217F5473009F8427 /* URDatePickerView.m in Sources */,
+				6E352FF5217F245100E12EC5 /* NewMissionToolBar.m in Sources */,
 				6E1FE6E42110061E00CE87ED /* URMissionModule.m in Sources */,
 				6EB393B8213A9DD50071D1A6 /* URNewTaskSettingView.m in Sources */,
 				6ED692F0212195AA00E360C8 /* URAddMissionViewController.m in Sources */,
+				6E352FDB217ECC0400E12EC5 /* URMissionScheduleViewController.m in Sources */,
 				6ED692F3212195C500E360C8 /* URMissionCardTableViewCell.m in Sources */,
 				6EB393B1213A9CE10071D1A6 /* URNewTaskNameView.m in Sources */,
 				6EB393B2213A9CE10071D1A6 /* URNewTastTimeView.m in Sources */,
 				6EB3939021342CCE0071D1A6 /* URCalendarData.m in Sources */,
 				6E1FE6A1210B1C4B00CE87ED /* main.m in Sources */,
+				6E352FEB217F173C00E12EC5 /* UIView+Shadow.m in Sources */,
 				6E1FE6C6210B2A6400CE87ED /* URMissionAddView.m in Sources */,
+				6E07421E2147BC270053D51E /* URScrolSelectView.m in Sources */,
 				6E1FE693210B1C4900CE87ED /* AppDelegate.m in Sources */,
 				6E1FE6D8210DA55C00CE87ED /* URMissionType.m in Sources */,
+				6E07421B2147B0D80053D51E /* NSString+Json.m in Sources */,
 				6EB393AF213A9CE10071D1A6 /* URMissionHeadLineView.m in Sources */,
 				6ED692E8211FDBB700E360C8 /* URAlertViewUtil.m in Sources */,
+				6E352FEE217F1A6600E12EC5 /* URTextField.m in Sources */,
 				6EB393BD213D6B480071D1A6 /* URMultiSelectView.m in Sources */,
+				6E352FFA217F482700E12EC5 /* URDataSelectView.m in Sources */,
+				6E352FF2217F23FC00E12EC5 /* URNewMissionViewController.m in Sources */,
 				6E1FE6D5210D97A300CE87ED /* URDataPickerView.m in Sources */,
 				6EB393872133EFC40071D1A6 /* URCalendarView.m in Sources */,
 			);
