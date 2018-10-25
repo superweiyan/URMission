@@ -10,8 +10,6 @@
 		6E07420D21479D7E0053D51E /* tagConfig.json in Resources */ = {isa = PBXBuildFile; fileRef = 6E07420C21479D7E0053D51E /* tagConfig.json */; };
 		6E07421B2147B0D80053D51E /* NSString+Json.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E07421A2147B0D80053D51E /* NSString+Json.m */; };
 		6E07421E2147BC270053D51E /* URScrolSelectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E07421D2147BC270053D51E /* URScrolSelectView.m */; };
-		6E0742212147C6E80053D51E /* URMissionSelectTagView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E0742202147C6E80053D51E /* URMissionSelectTagView.m */; };
-		6E074246215221D70053D51E /* URTaskTagView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E074245215221D70053D51E /* URTaskTagView.m */; };
 		6E1FE693210B1C4900CE87ED /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1FE692210B1C4900CE87ED /* AppDelegate.m */; };
 		6E1FE696210B1C4900CE87ED /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1FE695210B1C4900CE87ED /* ViewController.m */; };
 		6E1FE699210B1C4900CE87ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E1FE697210B1C4900CE87ED /* Main.storyboard */; };
@@ -20,12 +18,12 @@
 		6E1FE6A1210B1C4B00CE87ED /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1FE6A0210B1C4B00CE87ED /* main.m */; };
 		6E1FE6AB210B1C4B00CE87ED /* URMissionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1FE6AA210B1C4B00CE87ED /* URMissionTests.m */; };
 		6E1FE6B6210B1C4B00CE87ED /* URMissionUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1FE6B5210B1C4B00CE87ED /* URMissionUITests.m */; };
-		6E1FE6C6210B2A6400CE87ED /* URMissionAddView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1FE6C5210B2A6400CE87ED /* URMissionAddView.m */; };
 		6E1FE6CA210B313000CE87ED /* URCommonMarco.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1FE6C8210B313000CE87ED /* URCommonMarco.m */; };
 		6E1FE6D1210C6AA500CE87ED /* URRotationPresentAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1FE6D0210C6AA500CE87ED /* URRotationPresentAnimation.m */; };
 		6E1FE6D5210D97A300CE87ED /* URDataPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1FE6D4210D97A300CE87ED /* URDataPickerView.m */; };
-		6E1FE6D8210DA55C00CE87ED /* URMissionType.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1FE6D7210DA55C00CE87ED /* URMissionType.m */; };
-		6E1FE6E42110061E00CE87ED /* URMissionModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1FE6E32110061E00CE87ED /* URMissionModule.m */; };
+		6E2CE1702181ACC7000CC145 /* URMissionModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E2CE16F2181ACC7000CC145 /* URMissionModule.m */; };
+		6E2CE1742181B5C1000CC145 /* URDatabaseService.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E2CE1732181B5C1000CC145 /* URDatabaseService.m */; };
+		6E2CE1772181B80D000CC145 /* URMissionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E2CE1752181B80D000CC145 /* URMissionModel.m */; };
 		6E352FDB217ECC0400E12EC5 /* URMissionScheduleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E352FDA217ECC0400E12EC5 /* URMissionScheduleViewController.m */; };
 		6E352FE5217EFB6600E12EC5 /* URNavigateController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E352FE4217EFB6600E12EC5 /* URNavigateController.m */; };
 		6E352FE8217F0D5A00E12EC5 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E352FE7217F0D5A00E12EC5 /* QuartzCore.framework */; };
@@ -41,15 +39,8 @@
 		6EB3939721356C080071D1A6 /* URMonthItemCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB3939621356C080071D1A6 /* URMonthItemCollectionViewCell.m */; };
 		6EB3939A213574A10071D1A6 /* URMonthInfoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB39399213574A10071D1A6 /* URMonthInfoCollectionViewCell.m */; };
 		6EB3939E213792B30071D1A6 /* URWeekTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB3939D213792B30071D1A6 /* URWeekTitleView.m */; };
-		6EB393AF213A9CE10071D1A6 /* URMissionHeadLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB393A7213A9CE00071D1A6 /* URMissionHeadLineView.m */; };
-		6EB393B0213A9CE10071D1A6 /* URNewBaseTaskView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB393AC213A9CE00071D1A6 /* URNewBaseTaskView.m */; };
-		6EB393B1213A9CE10071D1A6 /* URNewTaskNameView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB393AD213A9CE00071D1A6 /* URNewTaskNameView.m */; };
-		6EB393B2213A9CE10071D1A6 /* URNewTastTimeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB393AE213A9CE00071D1A6 /* URNewTastTimeView.m */; };
-		6EB393B8213A9DD50071D1A6 /* URNewTaskSettingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB393B7213A9DD50071D1A6 /* URNewTaskSettingView.m */; };
 		6EB393BD213D6B480071D1A6 /* URMultiSelectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB393BC213D6B480071D1A6 /* URMultiSelectView.m */; };
 		6ED692E8211FDBB700E360C8 /* URAlertViewUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ED692E7211FDBB700E360C8 /* URAlertViewUtil.m */; };
-		6ED692F0212195AA00E360C8 /* URAddMissionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ED692EE212195AA00E360C8 /* URAddMissionViewController.m */; };
-		6ED692F3212195C500E360C8 /* URMissionCardTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ED692F1212195C500E360C8 /* URMissionCardTableViewCell.m */; };
 		F78A5A482A31C8D2AE1B75E5 /* Pods_URMission.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1E61CEAA09D5ECFBAD51482 /* Pods_URMission.framework */; };
 /* End PBXBuildFile section */
 
@@ -76,10 +67,6 @@
 		6E07421A2147B0D80053D51E /* NSString+Json.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Json.m"; sourceTree = "<group>"; };
 		6E07421C2147BC270053D51E /* URScrolSelectView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URScrolSelectView.h; sourceTree = "<group>"; };
 		6E07421D2147BC270053D51E /* URScrolSelectView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = URScrolSelectView.m; sourceTree = "<group>"; };
-		6E07421F2147C6E80053D51E /* URMissionSelectTagView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URMissionSelectTagView.h; sourceTree = "<group>"; };
-		6E0742202147C6E80053D51E /* URMissionSelectTagView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = URMissionSelectTagView.m; sourceTree = "<group>"; };
-		6E074244215221D70053D51E /* URTaskTagView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URTaskTagView.h; sourceTree = "<group>"; };
-		6E074245215221D70053D51E /* URTaskTagView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = URTaskTagView.m; sourceTree = "<group>"; };
 		6E1FE68E210B1C4900CE87ED /* URMission.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = URMission.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E1FE691210B1C4900CE87ED /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6E1FE692210B1C4900CE87ED /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -96,18 +83,18 @@
 		6E1FE6B1210B1C4B00CE87ED /* URMissionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = URMissionUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E1FE6B5210B1C4B00CE87ED /* URMissionUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = URMissionUITests.m; sourceTree = "<group>"; };
 		6E1FE6B7210B1C4B00CE87ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6E1FE6C4210B2A6400CE87ED /* URMissionAddView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URMissionAddView.h; sourceTree = "<group>"; };
-		6E1FE6C5210B2A6400CE87ED /* URMissionAddView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = URMissionAddView.m; sourceTree = "<group>"; };
 		6E1FE6C8210B313000CE87ED /* URCommonMarco.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URCommonMarco.m; sourceTree = "<group>"; };
 		6E1FE6C9210B313000CE87ED /* URCommonMarco.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URCommonMarco.h; sourceTree = "<group>"; };
 		6E1FE6CF210C6AA500CE87ED /* URRotationPresentAnimation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URRotationPresentAnimation.h; sourceTree = "<group>"; };
 		6E1FE6D0210C6AA500CE87ED /* URRotationPresentAnimation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = URRotationPresentAnimation.m; sourceTree = "<group>"; };
 		6E1FE6D3210D97A300CE87ED /* URDataPickerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URDataPickerView.h; sourceTree = "<group>"; };
 		6E1FE6D4210D97A300CE87ED /* URDataPickerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = URDataPickerView.m; sourceTree = "<group>"; };
-		6E1FE6D6210DA55C00CE87ED /* URMissionType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URMissionType.h; sourceTree = "<group>"; };
-		6E1FE6D7210DA55C00CE87ED /* URMissionType.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = URMissionType.m; sourceTree = "<group>"; };
-		6E1FE6E22110061E00CE87ED /* URMissionModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URMissionModule.h; sourceTree = "<group>"; };
-		6E1FE6E32110061E00CE87ED /* URMissionModule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = URMissionModule.m; sourceTree = "<group>"; };
+		6E2CE16E2181ACC7000CC145 /* URMissionModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URMissionModule.h; sourceTree = "<group>"; };
+		6E2CE16F2181ACC7000CC145 /* URMissionModule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = URMissionModule.m; sourceTree = "<group>"; };
+		6E2CE1722181B5C1000CC145 /* URDatabaseService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URDatabaseService.h; sourceTree = "<group>"; };
+		6E2CE1732181B5C1000CC145 /* URDatabaseService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = URDatabaseService.m; sourceTree = "<group>"; };
+		6E2CE1752181B80D000CC145 /* URMissionModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URMissionModel.m; sourceTree = "<group>"; };
+		6E2CE1762181B80D000CC145 /* URMissionModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URMissionModel.h; sourceTree = "<group>"; };
 		6E30B2C81A72C14EC49410C6 /* Pods-URMission.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-URMission.release.xcconfig"; path = "Pods/Target Support Files/Pods-URMission/Pods-URMission.release.xcconfig"; sourceTree = "<group>"; };
 		6E352FD9217ECC0400E12EC5 /* URMissionScheduleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URMissionScheduleViewController.h; sourceTree = "<group>"; };
 		6E352FDA217ECC0400E12EC5 /* URMissionScheduleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = URMissionScheduleViewController.m; sourceTree = "<group>"; };
@@ -138,24 +125,10 @@
 		6EB39399213574A10071D1A6 /* URMonthInfoCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = URMonthInfoCollectionViewCell.m; sourceTree = "<group>"; };
 		6EB3939C213792B30071D1A6 /* URWeekTitleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URWeekTitleView.h; sourceTree = "<group>"; };
 		6EB3939D213792B30071D1A6 /* URWeekTitleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = URWeekTitleView.m; sourceTree = "<group>"; };
-		6EB393A7213A9CE00071D1A6 /* URMissionHeadLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URMissionHeadLineView.m; sourceTree = "<group>"; };
-		6EB393A8213A9CE00071D1A6 /* URNewBaseTaskView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URNewBaseTaskView.h; sourceTree = "<group>"; };
-		6EB393A9213A9CE00071D1A6 /* URMissionHeadLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URMissionHeadLineView.h; sourceTree = "<group>"; };
-		6EB393AA213A9CE00071D1A6 /* URNewTaskNameView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URNewTaskNameView.h; sourceTree = "<group>"; };
-		6EB393AB213A9CE00071D1A6 /* URNewTastTimeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URNewTastTimeView.h; sourceTree = "<group>"; };
-		6EB393AC213A9CE00071D1A6 /* URNewBaseTaskView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URNewBaseTaskView.m; sourceTree = "<group>"; };
-		6EB393AD213A9CE00071D1A6 /* URNewTaskNameView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URNewTaskNameView.m; sourceTree = "<group>"; };
-		6EB393AE213A9CE00071D1A6 /* URNewTastTimeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URNewTastTimeView.m; sourceTree = "<group>"; };
-		6EB393B6213A9DD50071D1A6 /* URNewTaskSettingView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URNewTaskSettingView.h; sourceTree = "<group>"; };
-		6EB393B7213A9DD50071D1A6 /* URNewTaskSettingView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = URNewTaskSettingView.m; sourceTree = "<group>"; };
 		6EB393BB213D6B480071D1A6 /* URMultiSelectView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URMultiSelectView.h; sourceTree = "<group>"; };
 		6EB393BC213D6B480071D1A6 /* URMultiSelectView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = URMultiSelectView.m; sourceTree = "<group>"; };
 		6ED692E6211FDBB700E360C8 /* URAlertViewUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URAlertViewUtil.h; sourceTree = "<group>"; };
 		6ED692E7211FDBB700E360C8 /* URAlertViewUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = URAlertViewUtil.m; sourceTree = "<group>"; };
-		6ED692EE212195AA00E360C8 /* URAddMissionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URAddMissionViewController.m; sourceTree = "<group>"; };
-		6ED692EF212195AA00E360C8 /* URAddMissionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URAddMissionViewController.h; sourceTree = "<group>"; };
-		6ED692F1212195C500E360C8 /* URMissionCardTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URMissionCardTableViewCell.m; sourceTree = "<group>"; };
-		6ED692F2212195C500E360C8 /* URMissionCardTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URMissionCardTableViewCell.h; sourceTree = "<group>"; };
 		8FF53715C24B6BB25CDCEA35 /* Pods-URMission.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-URMission.debug.xcconfig"; path = "Pods/Target Support Files/Pods-URMission/Pods-URMission.debug.xcconfig"; sourceTree = "<group>"; };
 		F1E61CEAA09D5ECFBAD51482 /* Pods_URMission.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_URMission.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -222,6 +195,7 @@
 		6E1FE690210B1C4900CE87ED /* URMission */ = {
 			isa = PBXGroup;
 			children = (
+				6E2CE1712181B3E1000CC145 /* Service */,
 				6E352FE2217EFB4800E12EC5 /* Utils */,
 				6E352FD8217ECBE300E12EC5 /* MissionTab */,
 				6E07420721467D270053D51E /* Config */,
@@ -229,7 +203,6 @@
 				6E1FE6E521103A4000CE87ED /* CommonConfig */,
 				6E1FE6D2210D954B00CE87ED /* commonView */,
 				6E1FE6C7210B313000CE87ED /* Macro */,
-				6E1FE6C3210B2A4A00CE87ED /* Mission */,
 				6E1FE691210B1C4900CE87ED /* AppDelegate.h */,
 				6E1FE692210B1C4900CE87ED /* AppDelegate.m */,
 				6E1FE694210B1C4900CE87ED /* ViewController.h */,
@@ -261,20 +234,6 @@
 				6E1FE6B7210B1C4B00CE87ED /* Info.plist */,
 			);
 			path = URMissionUITests;
-			sourceTree = "<group>";
-		};
-		6E1FE6C3210B2A4A00CE87ED /* Mission */ = {
-			isa = PBXGroup;
-			children = (
-				6ED692ED2121957D00E360C8 /* View */,
-				6ED692EC2121957400E360C8 /* Controller */,
-				6E1FE6E12110023200CE87ED /* Module */,
-				6E1FE6C4210B2A6400CE87ED /* URMissionAddView.h */,
-				6E1FE6C5210B2A6400CE87ED /* URMissionAddView.m */,
-				6E1FE6D6210DA55C00CE87ED /* URMissionType.h */,
-				6E1FE6D7210DA55C00CE87ED /* URMissionType.m */,
-			);
-			path = Mission;
 			sourceTree = "<group>";
 		};
 		6E1FE6C7210B313000CE87ED /* Macro */ = {
@@ -311,15 +270,6 @@
 			path = commonView;
 			sourceTree = "<group>";
 		};
-		6E1FE6E12110023200CE87ED /* Module */ = {
-			isa = PBXGroup;
-			children = (
-				6E1FE6E22110061E00CE87ED /* URMissionModule.h */,
-				6E1FE6E32110061E00CE87ED /* URMissionModule.m */,
-			);
-			path = Module;
-			sourceTree = "<group>";
-		};
 		6E1FE6E521103A4000CE87ED /* CommonConfig */ = {
 			isa = PBXGroup;
 			children = (
@@ -334,6 +284,15 @@
 			children = (
 			);
 			path = Category;
+			sourceTree = "<group>";
+		};
+		6E2CE1712181B3E1000CC145 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				6E2CE1722181B5C1000CC145 /* URDatabaseService.h */,
+				6E2CE1732181B5C1000CC145 /* URDatabaseService.m */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 		6E352FD8217ECBE300E12EC5 /* MissionTab */ = {
@@ -351,6 +310,10 @@
 		6E352FDC217EF7F600E12EC5 /* module */ = {
 			isa = PBXGroup;
 			children = (
+				6E2CE1762181B80D000CC145 /* URMissionModel.h */,
+				6E2CE1752181B80D000CC145 /* URMissionModel.m */,
+				6E2CE16E2181ACC7000CC145 /* URMissionModule.h */,
+				6E2CE16F2181ACC7000CC145 /* URMissionModule.m */,
 			);
 			path = module;
 			sourceTree = "<group>";
@@ -396,46 +359,6 @@
 				6E352FF9217F482700E12EC5 /* URDataSelectView.m */,
 			);
 			path = NewMission;
-			sourceTree = "<group>";
-		};
-		6EB393A6213A9CAF0071D1A6 /* Create */ = {
-			isa = PBXGroup;
-			children = (
-				6EB393A9213A9CE00071D1A6 /* URMissionHeadLineView.h */,
-				6EB393A7213A9CE00071D1A6 /* URMissionHeadLineView.m */,
-				6EB393A8213A9CE00071D1A6 /* URNewBaseTaskView.h */,
-				6EB393AC213A9CE00071D1A6 /* URNewBaseTaskView.m */,
-				6EB393AA213A9CE00071D1A6 /* URNewTaskNameView.h */,
-				6EB393AD213A9CE00071D1A6 /* URNewTaskNameView.m */,
-				6EB393AB213A9CE00071D1A6 /* URNewTastTimeView.h */,
-				6EB393AE213A9CE00071D1A6 /* URNewTastTimeView.m */,
-				6EB393B6213A9DD50071D1A6 /* URNewTaskSettingView.h */,
-				6EB393B7213A9DD50071D1A6 /* URNewTaskSettingView.m */,
-				6E07421F2147C6E80053D51E /* URMissionSelectTagView.h */,
-				6E0742202147C6E80053D51E /* URMissionSelectTagView.m */,
-				6E074244215221D70053D51E /* URTaskTagView.h */,
-				6E074245215221D70053D51E /* URTaskTagView.m */,
-			);
-			path = Create;
-			sourceTree = "<group>";
-		};
-		6ED692EC2121957400E360C8 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				6ED692EF212195AA00E360C8 /* URAddMissionViewController.h */,
-				6ED692EE212195AA00E360C8 /* URAddMissionViewController.m */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		6ED692ED2121957D00E360C8 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				6EB393A6213A9CAF0071D1A6 /* Create */,
-				6ED692F2212195C500E360C8 /* URMissionCardTableViewCell.h */,
-				6ED692F1212195C500E360C8 /* URMissionCardTableViewCell.m */,
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		791BBBFE8B8C3F53F55338DF /* Frameworks */ = {
@@ -638,10 +561,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6EB393B0213A9CE10071D1A6 /* URNewBaseTaskView.m in Sources */,
-				6E0742212147C6E80053D51E /* URMissionSelectTagView.m in Sources */,
 				6E1FE696210B1C4900CE87ED /* ViewController.m in Sources */,
-				6E074246215221D70053D51E /* URTaskTagView.m in Sources */,
 				6EB3939721356C080071D1A6 /* URMonthItemCollectionViewCell.m in Sources */,
 				6EB393932134EEBB0071D1A6 /* URCalenderMonthTableViewCell.m in Sources */,
 				6E352FE5217EFB6600E12EC5 /* URNavigateController.m in Sources */,
@@ -649,24 +569,18 @@
 				6EB3939E213792B30071D1A6 /* URWeekTitleView.m in Sources */,
 				6E1FE6D1210C6AA500CE87ED /* URRotationPresentAnimation.m in Sources */,
 				6EB3939A213574A10071D1A6 /* URMonthInfoCollectionViewCell.m in Sources */,
+				6E2CE1742181B5C1000CC145 /* URDatabaseService.m in Sources */,
+				6E2CE1772181B80D000CC145 /* URMissionModel.m in Sources */,
 				6EA34870217F5473009F8427 /* URDatePickerView.m in Sources */,
 				6E352FF5217F245100E12EC5 /* NewMissionToolBar.m in Sources */,
-				6E1FE6E42110061E00CE87ED /* URMissionModule.m in Sources */,
-				6EB393B8213A9DD50071D1A6 /* URNewTaskSettingView.m in Sources */,
-				6ED692F0212195AA00E360C8 /* URAddMissionViewController.m in Sources */,
 				6E352FDB217ECC0400E12EC5 /* URMissionScheduleViewController.m in Sources */,
-				6ED692F3212195C500E360C8 /* URMissionCardTableViewCell.m in Sources */,
-				6EB393B1213A9CE10071D1A6 /* URNewTaskNameView.m in Sources */,
-				6EB393B2213A9CE10071D1A6 /* URNewTastTimeView.m in Sources */,
+				6E2CE1702181ACC7000CC145 /* URMissionModule.m in Sources */,
 				6EB3939021342CCE0071D1A6 /* URCalendarData.m in Sources */,
 				6E1FE6A1210B1C4B00CE87ED /* main.m in Sources */,
 				6E352FEB217F173C00E12EC5 /* UIView+Shadow.m in Sources */,
-				6E1FE6C6210B2A6400CE87ED /* URMissionAddView.m in Sources */,
 				6E07421E2147BC270053D51E /* URScrolSelectView.m in Sources */,
 				6E1FE693210B1C4900CE87ED /* AppDelegate.m in Sources */,
-				6E1FE6D8210DA55C00CE87ED /* URMissionType.m in Sources */,
 				6E07421B2147B0D80053D51E /* NSString+Json.m in Sources */,
-				6EB393AF213A9CE10071D1A6 /* URMissionHeadLineView.m in Sources */,
 				6ED692E8211FDBB700E360C8 /* URAlertViewUtil.m in Sources */,
 				6E352FEE217F1A6600E12EC5 /* URTextField.m in Sources */,
 				6EB393BD213D6B480071D1A6 /* URMultiSelectView.m in Sources */,

@@ -14,6 +14,8 @@
 #import "NewMissionToolBar.h"
 #import "URDataSelectView.h"
 #import "URDatePickerView.h"
+#import "NSDate+Utils.h"
+#import "URMissionModel.h"
 
 @interface URNewMissionViewController ()<URDatePickerViewDelegate>
 
@@ -40,17 +42,8 @@
     
     [self initViews];
     [self initNotifications];
+    [self initGesture];
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 - (void)initViews
 {
@@ -83,7 +76,6 @@
     shadowView.clipsToBounds = NO;
     shadowView.backgroundColor = [UIColor whiteColor];
     [self.view insertSubview:shadowView belowSubview:self.descriptView];
-//    [self.view addSubview:shadowView];
     
     [shadowView addShadow:4];
     [shadowView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -110,6 +102,7 @@
     
     self.endTimeSelectView = [[URDataSelectView alloc] init];
     self.endTimeSelectView.tip = @"开始时间";
+    self.endTimeSelectView.date = [NSDate date];
     
     self.endTimeSelectView.callback = ^{
         [weakSelf handleDateSelect:2];
@@ -136,10 +129,13 @@
         make.top.mas_equalTo(self.endTimeSelectView.mas_bottom).mas_offset(15);
     }];
 
-        
     self.toolBar = [[NewMissionToolBar alloc] init];
     [self.view addSubview:self.toolBar];
     self.toolBar.backgroundColor = [UIColor whiteColor];
+    
+    self.toolBar.okBlock = ^{
+        [weakSelf handleMissionOk];
+    };
     
     [self.toolBar mas_makeConstraints:^(MASConstraintMaker *make) {
         if (@available(iOS 11.0, *)) {
@@ -166,9 +162,27 @@
                                                object:nil];
 }
 
+- (void)initGesture
+{
+    UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] init];
+    [tapGesture addTarget:self action:@selector(onTapGesture:)];
+    [self.view addGestureRecognizer:tapGesture];
+}
+
+#pragma mark - tap
+
+- (void)onTapGesture:(UITapGestureRecognizer *)gesture
+{
+    [self.view endEditing:YES];
+}
+
+#pragma mark - date
+
 - (void)handleDateSelect:(NSUInteger)tag
 {
-    [self resetDataPicker];
+    [self.view endEditing:YES];
+    
+    [self clearDataPicker];
     
     URDatePickerView *datePicker = [[URDatePickerView alloc] init];
     [self.view addSubview:datePicker];
@@ -195,14 +209,16 @@
 {    
     NSUInteger tag = self.datePicker.tag;
     if (tag == 1) {
-        [self.startTimeSelectView updateTime:date];
+        self.startTimeSelectView.date = date;
     }
     else if (tag == 2) {
-        [self.endTimeSelectView updateTime:date];
+        self.endTimeSelectView.date = date;
     }
     else if (tag == 3) {
-        [self.notifyTimeSelectView updateTime:date];
+        self.notifyTimeSelectView.date = date;
     }
+    
+    [self clearDataPicker];
 }
 
 - (void)onDatePickerCancelClicked
@@ -211,26 +227,82 @@
     self.datePicker = nil;
 }
 
-//- (void)onDatePickerClicked:(NSDate *)date
-//{
-//    [self.startTimeSelectView updateTime:date];
-//}
+#pragma mark - ToolBar
+
+- (void)handleMissionOk
+{
+    NSString *title = self.titleFiled.text;
+    NSString *description = self.descriptView.text;
+    NSDate *startDate =  self.startTimeSelectView.date;
+    NSDate *endDate = self.endTimeSelectView.date;
+    
+    if (title.length == 0) {
+        return ;
+    }
+
+    if ([startDate earlierDate:[NSDate date]] && ![[NSDate date] isEqual:startDate]) {
+        return ;
+    }
+    
+    if ([endDate earlierDate:startDate]) {
+        return ;
+    }
+    
+    URNewMission *mission = [[URNewMission alloc] init];
+    mission.title = title;
+    mission.desc = description;
+    mission.startData = startDate;
+    mission.endData = endDate;
+}
 
 #pragma mark - notification
 
 - (void)onKeyboardWillHideNotification:(NSNotification *)notification
 {
-    [self resetDataPicker];
+    [self clearDataPicker];
+    
+    CGFloat duration =  [[notification.userInfo objectForKey:UIKeyboardAnimationDurationUserInfoKey] floatValue];
+    
+    [UIView animateWithDuration:duration animations:^{
+        
+        [self.toolBar mas_updateConstraints:^(MASConstraintMaker *make) {
+            if (@available(iOS 11.0, *)) {
+                make.bottom.mas_equalTo(self.view.mas_safeAreaLayoutGuideBottom);
+            }
+            else {
+                make.bottom.mas_equalTo(self.view.mas_bottom);
+            }
+        }];
+        
+        [self.view layoutIfNeeded];
+    }];
 }
 
 - (void)onKeyboardWillShowNotification:(NSNotification *)notification
 {
-    [self resetDataPicker];
+    [self clearDataPicker];
+    
+    CGRect beginRect = [[notification.userInfo objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue];
+    CGFloat duration =  [[notification.userInfo objectForKey:UIKeyboardAnimationDurationUserInfoKey] floatValue];
+    
+    [UIView animateWithDuration:duration animations:^{
+        
+        [self.toolBar mas_updateConstraints:^(MASConstraintMaker *make) {
+            if (@available(iOS 11.0, *)) {
+                make.bottom.mas_equalTo(self.view.mas_safeAreaLayoutGuideBottom).mas_offset(-beginRect.size.height);
+            }
+            else {
+                make.bottom.mas_equalTo(self.view.mas_bottom).mas_offset(-beginRect.size.height);
+            }
+        }];
+        
+        [self.view layoutIfNeeded];
+    }];
 }
 
 #pragma mark - utils
 
-- (void)resetDataPicker
+- (void)clearDataPicker
 {
     [self.datePicker removeFromSuperview];
     self.datePicker = nil;

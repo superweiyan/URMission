@@ -15,10 +15,9 @@ typedef void(^DataSelectViewClicked)(void);
 @interface URDataSelectView : UIView
 
 @property (nonatomic, strong) NSString *tip;
+@property (nonatomic, strong) NSDate    *date;
 
 @property (nonatomic, copy) DataSelectViewClicked  callback;
-
-- (void)updateTime:(NSDate *)date;
 
 @end
 

@@ -64,12 +64,12 @@
 //        make.size.mas_equalTo(CGSizeMake(60, 30));
 //    }];
     
-//    self.addMissionBtn = [[UIButton alloc] init];
-//    self.addMissionBtn.titleLabel.font = [UIFont systemFontOfSize:15];
-//    [self.addMissionBtn setTitle:@"保存" forState:UIControlStateNormal];
-//    self.addMissionBtn.backgroundColor = [UIColor redColor];
-//    [self addSubview:self.addMissionBtn];
-//    Btn_Click(self.addMissionBtn, @selector(onEndClicked:), UIControlEventTouchUpInside);
+    self.addMissionBtn = [[UIButton alloc] init];
+    self.addMissionBtn.titleLabel.font = [UIFont systemFontOfSize:15];
+    [self.addMissionBtn setTitle:@"保存" forState:UIControlStateNormal];
+    self.addMissionBtn.backgroundColor = [UIColor redColor];
+    [self addSubview:self.addMissionBtn];
+    Btn_Click(self.addMissionBtn, @selector(onEndClicked:), UIControlEventTouchUpInside);
     
     [self.addMissionBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.size.mas_equalTo(CGSizeMake(60, 30));
@@ -78,7 +78,7 @@
     }];
 }
 
-- (void)onNotifiyTimeClicked:(UIButton *)btn
+- (void)onEndClicked:(UIButton *)btn
 {
     if (self.okBlock) {
         self.okBlock();

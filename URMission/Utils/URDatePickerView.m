@@ -30,10 +30,13 @@
 {
     self = [super init];
     if (self) {
+        
+        self.backgroundColor = [UIColor whiteColor];
+        
         self.okBtn = [[UIButton alloc] init];
         [self.okBtn setTitle:@"确定" forState:UIControlStateNormal];
         [self.okBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-        self.okBtn.titleLabel.font = [UIFont systemFontOfSize:13];
+        self.okBtn.titleLabel.font = [UIFont systemFontOfSize:15];
         [self addSubview:self.okBtn];
         [self.okBtn addTarget:self action:@selector(onOKClicked:)
              forControlEvents:UIControlEventTouchUpInside];
@@ -41,7 +44,7 @@
         self.cancelBtn = [[UIButton alloc] init];
         [self.cancelBtn setTitle:@"取消" forState:UIControlStateNormal];
         [self.cancelBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-        self.cancelBtn.titleLabel.font = [UIFont systemFontOfSize:13];
+        self.cancelBtn.titleLabel.font = [UIFont systemFontOfSize:15];
         [self addSubview:self.cancelBtn];
         [self.cancelBtn addTarget:self action:@selector(onCancelClicked:)
                  forControlEvents:UIControlEventTouchUpInside];
@@ -67,8 +70,8 @@
 - (void)layoutSubviews
 {
     [super layoutSubviews];
-    self.okBtn.frame = CGRectMake(self.bounds.size.width - 45, 5, 30, 20);
-    self.cancelBtn.frame = CGRectMake(15, 5, 30, 20);
+    self.okBtn.frame = CGRectMake(self.bounds.size.width - 45, 5, 40, 20);
+    self.cancelBtn.frame = CGRectMake(15, 5, 40, 20);
     self.datePicker.frame = CGRectMake(0, 30, self.bounds.size.width, self.bounds.size.height - 30);
 }
 
