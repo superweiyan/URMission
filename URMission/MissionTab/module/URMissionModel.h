@@ -12,10 +12,17 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface URNewMission : NSObject
 
+@property (nonatomic, assign) UInt64    mId;
+
 @property (nonatomic, strong) NSString  *title;
 @property (nonatomic, strong) NSString  *desc;
 @property (nonatomic, strong) NSDate    *startData;
 @property (nonatomic, strong) NSDate    *endData;
+@property (nonatomic, strong) NSDate    *notifyData;
+@property (nonatomic, strong) NSDate    *createData;
+
+@property (nonatomic, strong) NSDictionary<NSNumber *, NSString *> *tagDict;
+
 
 @end
 

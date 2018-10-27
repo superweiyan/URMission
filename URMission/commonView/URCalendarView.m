@@ -48,6 +48,8 @@
     self.calenderTableView.dataSource = nil;
 }
 
+#pragma mark - init
+
 - (void)loadView
 {
     self.calenderTableView = [[UITableView alloc] init];
@@ -60,22 +62,37 @@
     self.calenderTableView.tableFooterView = [UIView new];
 }
 
+#pragma mark - layout
+
 - (void)layoutSubviews
 {
     [super layoutSubviews];
     self.calenderTableView.frame = self.bounds;
 }
 
+#pragma mark - data
+
 - (void)loadData
 {
     self.monthArray = [[NSMutableArray alloc] init];
-    NSUInteger month = [self getDateToInt:[NSDate date]];
+    NSUInteger month = [URCalendarView getDateToInt:[NSDate date]];
     for(int i = 0; i < 3; i++) {
-        [self.monthArray addObject:[self calcCalenderItem:month]];
-        month = [self getNextMonth:month];
+        [self.monthArray addObject:[URCalendarView calcCalenderItem:month]];
+        month = [URCalendarView getNextMonth:month];
     }
     [self.calenderTableView reloadData];
 }
+
+#pragma mark - public
+
++ (CGFloat)getHeightForDate:(NSDate *)day
+{
+    NSUInteger month = [URCalendarView getDateToInt:day];
+    URCalendarItem *item = [URCalendarView calcCalenderItem:month];
+    return [URCalendarView getCellHeight:item];
+}
+
+#pragma mark - table delegate
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
@@ -113,71 +130,6 @@
     return cell;
 }
 
-#pragma mark - helper
-
-- (NSUInteger)getDateToInt:(NSDate *)date
-{
-    NSUInteger month = [date getMonth];
-    NSUInteger year = [date getYear];
-    return year * 100 + month;
-}
-
-- (NSUInteger)getNextMonth:(NSUInteger)current
-{
-    int month = current % 100;
-    
-    if (month == 12) {
-        current += 89;
-    }
-    else {
-        current += 1;
-    }
-    return current;
-}
-
-- (NSUInteger)getLastMonth:(NSUInteger)current
-{
-    int month = current % 100;
-    if (month == 1) {
-        current -= 89;
-    }
-    else {
-        current -= 1;
-    }
-    return current;
-}
-
-- (URCalendarItem *)calcCalenderItem:(NSUInteger)month
-{
-    NSString *monthString = [URCalendarView converMonthToString:month];
-    NSDate *itemDate = [NSDate getCalendarFromString:monthString format:@"yyyy-MM"];
-    
-    URCalendarItem *item = [[URCalendarItem alloc] init];
-    item.month = month % 100 ;
-    item.year = month / 100;
-    item.startWeek = [NSDate getFirstDayWeekForMonth:itemDate];
-    item.monthDay = [itemDate getMonthDays];
-    item.weekLine = [itemDate getWeeksInMonth];
-    
-    return item;
-}
-
-// yyyy-MM
-+ (CGFloat)getCellHeight:(URCalendarItem *)item
-{
-    // 顶部空隙 + 月份 + 星期行数 + 底部空隙
-    return  5 + 45 + item.weekLine * 45 + 5;
-}
-
-+ (NSString *)converMonthToString:(NSUInteger)month
-{
-    NSUInteger m = month % 100;
-    NSUInteger y = month / 100;
-    if (m < 10) {
-        return [NSString stringWithFormat:@"%ld-0%ld", y, m];
-    }
-    return [NSString stringWithFormat:@"%ld-%ld", y, m];
-}
 
 - (void)handleDay:(NSDate *)date
 {
@@ -212,5 +164,72 @@
     
     [self.calenderTableView reloadData];
 }
+
+#pragma mark - helper
+
++ (NSUInteger)getDateToInt:(NSDate *)date
+{
+    NSUInteger month = [date getMonth];
+    NSUInteger year = [date getYear];
+    return year * 100 + month;
+}
+
++ (NSUInteger)getNextMonth:(NSUInteger)current
+{
+    int month = current % 100;
+    
+    if (month == 12) {
+        current += 89;
+    }
+    else {
+        current += 1;
+    }
+    return current;
+}
+
++ (NSUInteger)getLastMonth:(NSUInteger)current
+{
+    int month = current % 100;
+    if (month == 1) {
+        current -= 89;
+    }
+    else {
+        current -= 1;
+    }
+    return current;
+}
+
++ (URCalendarItem *)calcCalenderItem:(NSUInteger)month
+{
+    NSString *monthString = [URCalendarView converMonthToString:month];
+    NSDate *itemDate = [NSDate getCalendarFromString:monthString format:@"yyyy-MM"];
+    
+    URCalendarItem *item = [[URCalendarItem alloc] init];
+    item.month = month % 100 ;
+    item.year = month / 100;
+    item.startWeek = [NSDate getFirstDayWeekForMonth:itemDate];
+    item.monthDay = [itemDate getMonthDays];
+    item.weekLine = [itemDate getWeeksInMonth];
+    
+    return item;
+}
+
+// yyyy-MM
++ (CGFloat)getCellHeight:(URCalendarItem *)item
+{
+    // 顶部空隙 + 月份 + 星期行数 + 底部空隙
+    return  5 + 45 + item.weekLine * 45 + 5;
+}
+
++ (NSString *)converMonthToString:(NSUInteger)month
+{
+    NSUInteger m = month % 100;
+    NSUInteger y = month / 100;
+    if (m < 10) {
+        return [NSString stringWithFormat:@"%ld-0%ld", y, m];
+    }
+    return [NSString stringWithFormat:@"%ld-%ld", y, m];
+}
+
 
 @end

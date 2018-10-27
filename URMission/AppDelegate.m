@@ -10,6 +10,8 @@
 #import "URMissionScheduleViewController.h"
 #import "URNavigateController.h"
 
+#import "URDatabaseService.h"
+
 @interface AppDelegate ()<UITabBarDelegate>
 
 @end
@@ -47,6 +49,9 @@
     self.window.rootViewController = tabbarController;
     //2.设置Window为主窗口并显示出来
     [self.window makeKeyAndVisible];
+    
+    [[URDatabaseService shareInstance] initDatabase:999999999];
+    
     return YES;
 }
 

@@ -7,14 +7,19 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "URDatabaseTypes.h"
 
 NS_ASSUME_NONNULL_BEGIN
+
+@class URNewMission;
 
 @interface URDatabaseService : NSObject
 
 + (instancetype)shareInstance;
 
 - (BOOL)initDatabase:(uint64_t)db;
+
+- (void)addMission:(URNewMission *)mission callback:(DBCallback)callback;
 
 @end
 

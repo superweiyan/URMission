@@ -16,6 +16,7 @@
 #import "URDatePickerView.h"
 #import "NSDate+Utils.h"
 #import "URMissionModel.h"
+#import "URMissionModule.h"
 
 @interface URNewMissionViewController ()<URDatePickerViewDelegate>
 
@@ -101,7 +102,7 @@
     }];
     
     self.endTimeSelectView = [[URDataSelectView alloc] init];
-    self.endTimeSelectView.tip = @"开始时间";
+    self.endTimeSelectView.tip = @"结束时间";
     self.endTimeSelectView.date = [NSDate date];
     
     self.endTimeSelectView.callback = ^{
@@ -240,11 +241,11 @@
         return ;
     }
 
-    if ([startDate earlierDate:[NSDate date]] && ![[NSDate date] isEqual:startDate]) {
+    if ([startDate earlierDate:[NSDate date]] && ![NSDate isToday:startDate]) {
         return ;
     }
-    
-    if ([endDate earlierDate:startDate]) {
+
+    if ([endDate earlierDate:startDate] == endDate) {
         return ;
     }
     
@@ -253,6 +254,11 @@
     mission.desc = description;
     mission.startData = startDate;
     mission.endData = endDate;
+    mission.tagDict = @{@"tag":@[@"None"]};
+    mission.createData = [NSDate date];
+    mission.mId = [NSDate date].timeIntervalSince1970 * 1000;
+    
+    [[URMissionModule shareInstance] saveMission:mission];
 }
 
 #pragma mark - notification

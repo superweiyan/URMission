@@ -14,4 +14,6 @@ typedef void(^ItemClickedCallback) (NSDate *);
 
 @property (nonatomic, copy) ItemClickedCallback  itemClickedBlock;
 
++ (CGFloat)getHeightForDate:(NSDate *)day;
+
 @end
