@@ -34,6 +34,7 @@
 		6EA34870217F5473009F8427 /* URDatePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EA3486F217F5473009F8427 /* URDatePickerView.m */; };
 		6EA7CB0721846788002AA499 /* URMissionScheduleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EA7CB0621846788002AA499 /* URMissionScheduleViewController.m */; };
 		6EA7CB0D2186AE7A002AA499 /* URMissionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EA7CB0C2186AE7A002AA499 /* URMissionModel.m */; };
+		6EA7CB18218839D6002AA499 /* UIView+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EA7CB16218839D6002AA499 /* UIView+Toast.m */; };
 		6EB393872133EFC40071D1A6 /* URCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB393862133EFC40071D1A6 /* URCalendarView.m */; };
 		6EB3939021342CCE0071D1A6 /* URCalendarData.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB3938F21342CCE0071D1A6 /* URCalendarData.m */; };
 		6EB393932134EEBB0071D1A6 /* URCalenderMonthTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB393922134EEBB0071D1A6 /* URCalenderMonthTableViewCell.m */; };
@@ -116,6 +117,8 @@
 		6EA7CB0621846788002AA499 /* URMissionScheduleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = URMissionScheduleViewController.m; sourceTree = "<group>"; };
 		6EA7CB0C2186AE7A002AA499 /* URMissionModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = URMissionModel.m; sourceTree = "<group>"; };
 		6EA7CB0E2186AEFE002AA499 /* URMissionModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URMissionModel.h; sourceTree = "<group>"; };
+		6EA7CB16218839D6002AA499 /* UIView+Toast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Toast.m"; sourceTree = "<group>"; };
+		6EA7CB17218839D6002AA499 /* UIView+Toast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Toast.h"; sourceTree = "<group>"; };
 		6EB393852133EFC40071D1A6 /* URCalendarView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URCalendarView.h; sourceTree = "<group>"; };
 		6EB393862133EFC40071D1A6 /* URCalendarView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = URCalendarView.m; sourceTree = "<group>"; };
 		6EB3938E21342CCE0071D1A6 /* URCalendarData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URCalendarData.h; sourceTree = "<group>"; };
@@ -285,6 +288,8 @@
 		6E1FE6EF21103DF800CE87ED /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				6EA7CB17218839D6002AA499 /* UIView+Toast.h */,
+				6EA7CB16218839D6002AA499 /* UIView+Toast.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -606,6 +611,7 @@
 				6ED692E8211FDBB700E360C8 /* URAlertViewUtil.m in Sources */,
 				6E352FEE217F1A6600E12EC5 /* URTextField.m in Sources */,
 				6EB393BD213D6B480071D1A6 /* URMultiSelectView.m in Sources */,
+				6EA7CB18218839D6002AA499 /* UIView+Toast.m in Sources */,
 				6E352FFA217F482700E12EC5 /* URDataSelectView.m in Sources */,
 				6E352FF2217F23FC00E12EC5 /* URNewMissionViewController.m in Sources */,
 				6E1FE6D5210D97A300CE87ED /* URDataPickerView.m in Sources */,
