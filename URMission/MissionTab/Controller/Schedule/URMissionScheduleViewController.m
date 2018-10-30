@@ -11,6 +11,9 @@
 #import "URCommonMarco.h"
 #import "URCalendarView.h"
 #import "Masonry.h"
+#import "URMissionModule.h"
+#import "URMissionModel.h"
+
 
 @interface URMissionScheduleViewController ()
 
@@ -25,6 +28,7 @@
     // Do any additional setup after loading the view.
     
     [self initViews];
+    [self loadData];
 }
 
 /*
@@ -63,6 +67,16 @@
 {
     self.navigationController.hidesBottomBarWhenPushed = YES;
     JumpViewController(@"URNewMissionViewController");
+}
+
+- (void)loadData
+{
+    [[URMissionModule shareInstance] loadMission:[NSDate date] callback:^(int32_t result,
+                                                                          NSArray<URMissionInfo *> *infoArray){
+        if (result) {
+            
+        }
+    }];
 }
 
 @end

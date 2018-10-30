@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface URNewMission : NSObject
+@interface URMissionInfo : NSObject
 
 @property (nonatomic, assign) UInt64    mId;
 
@@ -25,5 +25,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 @end
+
+
+typedef void (^MissionLoadCallback)(int32_t result, NSArray<URMissionInfo *> *);
 
 NS_ASSUME_NONNULL_END

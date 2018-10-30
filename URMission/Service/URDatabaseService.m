@@ -9,7 +9,6 @@
 #import "URDatabaseService.h"
 #import "FMDatabaseQueue.h"
 #import "URPathConfig.h"
-#import "URMissionModel.h"
 
 @interface URDatabaseService()
 
@@ -49,18 +48,16 @@ static id obj = nil;
 
 - (void)createTable
 {
-    NSString *sql = @"CREATE TABLE MissionTable (id INTEGER,\
-                   subType INTEGER,\
+    NSString *sql = @"CREATE TABLE MissionTable (id INTEGER NOT NULL,\
                    title TEXT NOT NULL,\
                    desc TEXT,\
                    createDate INTEGER NOT NULL,\
                    startDate INTEGER NOT NULL,\
                    endDate INTEGER NOT NULL,\
-                   notifyDate INTEGER NOT NULL, \
+                   notifyDate INTEGER, \
                    tag TEXT,\
-                   createData INTEGER NOT NULL,\
-                   version INTEGER DEFAULT(1),\
-                   PRIMARY KEY(id, subType));";
+                   version INTEGER DEFAULT '1' NOT NULL,\
+                   PRIMARY KEY(id))";
     
     [self doCreateTableWithSQL:sql];
 }
@@ -70,13 +67,14 @@ static id obj = nil;
     [_dbQueue inTransaction:^(FMDatabase *db, BOOL *rollback) {
         [db executeUpdate:sql];
         if ([db hadError]) {
+            *rollback = YES;
             NSLog(@"Create Tables error:%@", [db lastErrorMessage]);
         }
     }];
 }
 
 
-- (void)addMission:(URNewMission *)mission callback:(DBCallback)callback
+- (void)addMission:(URMissionInfo *)mission callback:(DBCallback)callback
 {
     NSString *tag = nil;
     if (mission.tagDict) {
@@ -84,7 +82,7 @@ static id obj = nil;
     }
     
     NSString *sql = [NSString stringWithFormat:@"insert or replace into MissionTable (id, title,\
-                     desc, startDate, endDate, notifyDate, tag, createData) values(?,?,?,?,?,?,?,?)"];
+                     desc, startDate, endDate, notifyDate, createDate) values(?,?,?,?,?,?,?)"];
     
     [self.dbQueue inTransaction:^(FMDatabase *db, BOOL *rollback) {
         [db executeUpdate:sql withArgumentsInArray:@[@(mission.mId),
@@ -93,7 +91,6 @@ static id obj = nil;
                                                       @(mission.startData.timeIntervalSince1970),
                                                       @(mission.endData.timeIntervalSince1970),
                                                       @(mission.notifyData.timeIntervalSince1970),
-                                                      tag,
                                                       @(mission.createData.timeIntervalSince1970)]];
     
         if ([db hadError]) {
@@ -105,6 +102,42 @@ static id obj = nil;
             if (callback) {
                 callback(0);
             }
+        }
+    }];
+}
+
+- (void)loadMissionRange:(NSTimeInterval)tm lastSecond:(NSTimeInterval)lm callback:(MissionLoadCallback)callback
+{
+    [self.dbQueue inTransaction:^(FMDatabase *db, BOOL *rollback) {
+        
+        NSString *sql = [NSString stringWithFormat:@"select * from MissionTable where startDate < %f and endDate > %f", lm, tm];
+
+        if ([db hadError]) {
+            if(callback) {
+                callback(1, [[NSArray alloc] init]);
+            }
+            return ;
+        }
+        
+        FMResultSet *set = [db executeQuery:sql];
+        
+        NSMutableArray *infoArray = [[NSMutableArray alloc] init];
+        
+        while ([set next]) {
+            URMissionInfo *info = [[URMissionInfo alloc] init];
+            info.mId = [set intForColumn:@"Id"];
+            info.title = [set stringForColumn:@"title"];
+            info.desc = [set stringForColumn:@"desc"];
+            info.startData = [[NSDate alloc] initWithTimeIntervalSince1970:[set intForColumn:@"startDate"]];
+            info.endData = [[NSDate alloc] initWithTimeIntervalSince1970:[set intForColumn:@"endDate"]];
+            info.notifyData = [[NSDate alloc] initWithTimeIntervalSince1970:[set intForColumn:@"notifyDate"]];
+            info.createData = [[NSDate alloc] initWithTimeIntervalSince1970:[set intForColumn:@"createDate"]];
+            
+            [infoArray addObject:info];
+        }
+        
+        if (callback) {
+            callback(0, infoArray);
         }
     }];
 }

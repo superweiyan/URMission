@@ -8,10 +8,11 @@
 
 #import <Foundation/Foundation.h>
 #import "URDatabaseTypes.h"
+#import "URMissionModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@class URNewMission;
+@class URMissionInfo;
 
 @interface URDatabaseService : NSObject
 
@@ -19,7 +20,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (BOOL)initDatabase:(uint64_t)db;
 
-- (void)addMission:(URNewMission *)mission callback:(DBCallback)callback;
+- (void)addMission:(URMissionInfo *)mission callback:(DBCallback)callback;
+
+- (void)loadMissionRange:(NSTimeInterval)tm
+              lastSecond:(NSTimeInterval)lm
+                callback:(MissionLoadCallback)callback;
 
 @end
 

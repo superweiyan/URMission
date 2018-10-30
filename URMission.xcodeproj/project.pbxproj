@@ -23,7 +23,6 @@
 		6E1FE6D5210D97A300CE87ED /* URDataPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1FE6D4210D97A300CE87ED /* URDataPickerView.m */; };
 		6E2CE1702181ACC7000CC145 /* URMissionModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E2CE16F2181ACC7000CC145 /* URMissionModule.m */; };
 		6E2CE1742181B5C1000CC145 /* URDatabaseService.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E2CE1732181B5C1000CC145 /* URDatabaseService.m */; };
-		6E2CE1772181B80D000CC145 /* URMissionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E2CE1752181B80D000CC145 /* URMissionModel.m */; };
 		6E2CE17D21831331000CC145 /* URDatabaseTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E2CE17C21831331000CC145 /* URDatabaseTypes.m */; };
 		6E352FE5217EFB6600E12EC5 /* URNavigateController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E352FE4217EFB6600E12EC5 /* URNavigateController.m */; };
 		6E352FE8217F0D5A00E12EC5 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E352FE7217F0D5A00E12EC5 /* QuartzCore.framework */; };
@@ -34,6 +33,7 @@
 		6E352FFA217F482700E12EC5 /* URDataSelectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E352FF9217F482700E12EC5 /* URDataSelectView.m */; };
 		6EA34870217F5473009F8427 /* URDatePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EA3486F217F5473009F8427 /* URDatePickerView.m */; };
 		6EA7CB0721846788002AA499 /* URMissionScheduleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EA7CB0621846788002AA499 /* URMissionScheduleViewController.m */; };
+		6EA7CB0D2186AE7A002AA499 /* URMissionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EA7CB0C2186AE7A002AA499 /* URMissionModel.m */; };
 		6EB393872133EFC40071D1A6 /* URCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB393862133EFC40071D1A6 /* URCalendarView.m */; };
 		6EB3939021342CCE0071D1A6 /* URCalendarData.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB3938F21342CCE0071D1A6 /* URCalendarData.m */; };
 		6EB393932134EEBB0071D1A6 /* URCalenderMonthTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EB393922134EEBB0071D1A6 /* URCalenderMonthTableViewCell.m */; };
@@ -94,8 +94,6 @@
 		6E2CE16F2181ACC7000CC145 /* URMissionModule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = URMissionModule.m; sourceTree = "<group>"; };
 		6E2CE1722181B5C1000CC145 /* URDatabaseService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URDatabaseService.h; sourceTree = "<group>"; };
 		6E2CE1732181B5C1000CC145 /* URDatabaseService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = URDatabaseService.m; sourceTree = "<group>"; };
-		6E2CE1752181B80D000CC145 /* URMissionModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URMissionModel.m; sourceTree = "<group>"; };
-		6E2CE1762181B80D000CC145 /* URMissionModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URMissionModel.h; sourceTree = "<group>"; };
 		6E2CE17B21831331000CC145 /* URDatabaseTypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URDatabaseTypes.h; sourceTree = "<group>"; };
 		6E2CE17C21831331000CC145 /* URDatabaseTypes.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = URDatabaseTypes.m; sourceTree = "<group>"; };
 		6E30B2C81A72C14EC49410C6 /* Pods-URMission.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-URMission.release.xcconfig"; path = "Pods/Target Support Files/Pods-URMission/Pods-URMission.release.xcconfig"; sourceTree = "<group>"; };
@@ -116,6 +114,8 @@
 		6EA3486F217F5473009F8427 /* URDatePickerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = URDatePickerView.m; sourceTree = "<group>"; };
 		6EA7CB0521846788002AA499 /* URMissionScheduleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URMissionScheduleViewController.h; sourceTree = "<group>"; };
 		6EA7CB0621846788002AA499 /* URMissionScheduleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = URMissionScheduleViewController.m; sourceTree = "<group>"; };
+		6EA7CB0C2186AE7A002AA499 /* URMissionModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = URMissionModel.m; sourceTree = "<group>"; };
+		6EA7CB0E2186AEFE002AA499 /* URMissionModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URMissionModel.h; sourceTree = "<group>"; };
 		6EB393852133EFC40071D1A6 /* URCalendarView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URCalendarView.h; sourceTree = "<group>"; };
 		6EB393862133EFC40071D1A6 /* URCalendarView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = URCalendarView.m; sourceTree = "<group>"; };
 		6EB3938E21342CCE0071D1A6 /* URCalendarData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URCalendarData.h; sourceTree = "<group>"; };
@@ -303,6 +303,7 @@
 		6E352FD8217ECBE300E12EC5 /* MissionTab */ = {
 			isa = PBXGroup;
 			children = (
+				6EA7CB0A2186AE64002AA499 /* Model */,
 				6E352FDD217EF7F600E12EC5 /* Controller */,
 				6E352FDC217EF7F600E12EC5 /* module */,
 				6E352FDE217EF7F600E12EC5 /* view */,
@@ -313,8 +314,6 @@
 		6E352FDC217EF7F600E12EC5 /* module */ = {
 			isa = PBXGroup;
 			children = (
-				6E2CE1762181B80D000CC145 /* URMissionModel.h */,
-				6E2CE1752181B80D000CC145 /* URMissionModel.m */,
 				6E2CE16E2181ACC7000CC145 /* URMissionModule.h */,
 				6E2CE16F2181ACC7000CC145 /* URMissionModule.m */,
 			);
@@ -372,6 +371,15 @@
 				6EA7CB0621846788002AA499 /* URMissionScheduleViewController.m */,
 			);
 			path = Schedule;
+			sourceTree = "<group>";
+		};
+		6EA7CB0A2186AE64002AA499 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6EA7CB0E2186AEFE002AA499 /* URMissionModel.h */,
+				6EA7CB0C2186AE7A002AA499 /* URMissionModel.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		791BBBFE8B8C3F53F55338DF /* Frameworks */ = {
@@ -577,13 +585,13 @@
 				6E1FE696210B1C4900CE87ED /* ViewController.m in Sources */,
 				6EB3939721356C080071D1A6 /* URMonthItemCollectionViewCell.m in Sources */,
 				6EB393932134EEBB0071D1A6 /* URCalenderMonthTableViewCell.m in Sources */,
+				6EA7CB0D2186AE7A002AA499 /* URMissionModel.m in Sources */,
 				6E352FE5217EFB6600E12EC5 /* URNavigateController.m in Sources */,
 				6E1FE6CA210B313000CE87ED /* URCommonMarco.m in Sources */,
 				6EB3939E213792B30071D1A6 /* URWeekTitleView.m in Sources */,
 				6E1FE6D1210C6AA500CE87ED /* URRotationPresentAnimation.m in Sources */,
 				6EB3939A213574A10071D1A6 /* URMonthInfoCollectionViewCell.m in Sources */,
 				6E2CE1742181B5C1000CC145 /* URDatabaseService.m in Sources */,
-				6E2CE1772181B80D000CC145 /* URMissionModel.m in Sources */,
 				6EA34870217F5473009F8427 /* URDatePickerView.m in Sources */,
 				6E352FF5217F245100E12EC5 /* NewMissionToolBar.m in Sources */,
 				6EA7CB0721846788002AA499 /* URMissionScheduleViewController.m in Sources */,

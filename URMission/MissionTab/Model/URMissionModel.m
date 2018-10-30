@@ -8,6 +8,6 @@
 
 #import "URMissionModel.h"
 
-@implementation URNewMission
+@implementation URMissionInfo
 
 @end

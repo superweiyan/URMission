@@ -249,7 +249,7 @@
         return ;
     }
     
-    URNewMission *mission = [[URNewMission alloc] init];
+    URMissionInfo *mission = [[URMissionInfo alloc] init];
     mission.title = title;
     mission.desc = description;
     mission.startData = startDate;

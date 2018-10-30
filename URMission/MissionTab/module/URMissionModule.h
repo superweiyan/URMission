@@ -7,16 +7,19 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "URMissionModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@class URNewMission;
+@class URMissionInfo;
 
 @interface URMissionModule : NSObject
 
 + (instancetype)shareInstance;
 
-- (void)saveMission:(URNewMission *)mission;
+- (void)saveMission:(URMissionInfo *)mission;
+
+- (void)loadMission:(NSDate *)date callback:(MissionLoadCallback)callback;
 
 @end
 
